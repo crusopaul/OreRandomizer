@@ -1,0 +1,18 @@
+name: OreRandomizer
+version: "1.0"
+main: io.github.crusopaul.OreRandomizer.OreRandomizer
+commands:
+  ToggleCreeperSound:
+    aliases: [or.sound]
+    description: Toggles the sound that plays when ore is randomly generated.
+    permission-message: You do not have permission to use this command.
+    usage: /ToggleCreeperSound
+permissions:
+  OreRandomizer.ToggleCreeperSound:
+    description: Allows you to use the command ToggleCreeperSound.
+    default: true
+  OreRandomizer.*:
+    description: Wildcard permission.
+    default: false
+    children:
+      OreRandomizer.ToggleCreeperSound: true
