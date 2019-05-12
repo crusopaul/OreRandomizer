@@ -19,6 +19,8 @@ public class OreRandomizer extends JavaPlugin {
         this.listener = new OreListener(this);
         getServer().getPluginManager().registerEvents(this.listener, this);
         this.getCommand("ToggleCreeperSound").setExecutor(new ToggleCreeperSound(this));
+        this.getCommand("SetOreRatio").setExecutor(new SetOreRatio(this));
+        this.getCommand("GetOreRatio").setExecutor(new GetOreRatio(this));
         getLogger().info("OreRandomizer enabled");
 
     }

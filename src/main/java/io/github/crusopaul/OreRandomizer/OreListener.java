@@ -30,11 +30,7 @@ public class OreListener implements Listener {
 
     }
 
-    OreListener (OreRandomizer pluginToSet) {
-
-        this.plugin = pluginToSet;
-        this.rng = new Random();
-        this.ratioPrecomputation = new int [8];
+    public void SetOreRatio() {
 
         this.ratioPrecomputation[0] = plugin.getConfig().getInt("RandomSpawnRatios.Cobblestone");
         this.ratioPrecomputation[1] = this.ratioPrecomputation[0] +
@@ -52,6 +48,14 @@ public class OreListener implements Listener {
         this.ratioPrecomputation[7] = this.ratioPrecomputation[6] +
                 plugin.getConfig().getInt("RandomSpawnRatios.Redstone");
 
+    }
+
+    OreListener (OreRandomizer pluginToSet) {
+
+        this.plugin = pluginToSet;
+        this.rng = new Random();
+        this.ratioPrecomputation = new int [8];
+        SetOreRatio();
         this.soundToPlay = plugin.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound")?
                 Sound.ENTITY_CREEPER_PRIMED:
                 Sound.BLOCK_LAVA_EXTINGUISH;

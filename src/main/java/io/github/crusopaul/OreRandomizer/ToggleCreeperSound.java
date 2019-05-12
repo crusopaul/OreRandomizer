@@ -8,11 +8,11 @@ import org.bukkit.entity.Player;
 
 public class ToggleCreeperSound implements CommandExecutor {
 
-    private OreRandomizer oreRandomizer;
+    private OreRandomizer plugin;
 
-    ToggleCreeperSound(OreRandomizer oreRandomizerToSet) {
+    ToggleCreeperSound(OreRandomizer pluginToSet) {
 
-        this.oreRandomizer = oreRandomizerToSet;
+        this.plugin = pluginToSet;
 
     }
 
@@ -20,10 +20,19 @@ public class ToggleCreeperSound implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
         if (sender.hasPermission("OreRandomizer.ToggleCreeperSound") || !(sender instanceof Player)) {
-            this.oreRandomizer.getListener().ToggleCreeperSound();
+
+            this.plugin.getConfig().set(
+                "RandomizationSound.PlayCreeperPrimingSound",
+                !this.plugin.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound")
+            );
+            this.plugin.getListener().ToggleCreeperSound();
+            this.plugin.saveConfig();
+
         }
         else {
+
             sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
+
         }
 
         return true;
