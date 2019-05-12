@@ -11,7 +11,6 @@ import java.util.Random;
 
 public class OreListener implements Listener {
 
-    // Private fields
     private OreRandomizer plugin;
     private Random rng;
     private int [] ratioPrecomputation;
@@ -31,29 +30,27 @@ public class OreListener implements Listener {
 
     }
 
-    // Constructor
     OreListener (OreRandomizer pluginToSet) {
 
         this.plugin = pluginToSet;
         this.rng = new Random();
         this.ratioPrecomputation = new int [8];
 
-        // Compute ratios for random ore generation
-        this.ratioPrecomputation[0] = plugin.getConfig().getInt("RandomSpawnRatios.Cobblestone"); // Cobblestone: 20
+        this.ratioPrecomputation[0] = plugin.getConfig().getInt("RandomSpawnRatios.Cobblestone");
         this.ratioPrecomputation[1] = this.ratioPrecomputation[0] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Coal"); // Coal
+                plugin.getConfig().getInt("RandomSpawnRatios.Coal");
         this.ratioPrecomputation[2] = this.ratioPrecomputation[1] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Diamond"); // Diamond
+                plugin.getConfig().getInt("RandomSpawnRatios.Diamond");
         this.ratioPrecomputation[3] = this.ratioPrecomputation[2] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Emerald"); // Emerald
+                plugin.getConfig().getInt("RandomSpawnRatios.Emerald");
         this.ratioPrecomputation[4] = this.ratioPrecomputation[3] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Gold"); // Gold
+                plugin.getConfig().getInt("RandomSpawnRatios.Gold");
         this.ratioPrecomputation[5] = this.ratioPrecomputation[4] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Iron"); // Iron
+                plugin.getConfig().getInt("RandomSpawnRatios.Iron");
         this.ratioPrecomputation[6] = this.ratioPrecomputation[5] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Lapis"); // Lapis
+                plugin.getConfig().getInt("RandomSpawnRatios.Lapis");
         this.ratioPrecomputation[7] = this.ratioPrecomputation[6] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Redstone"); // Redstone
+                plugin.getConfig().getInt("RandomSpawnRatios.Redstone");
 
         this.soundToPlay = plugin.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound")?
                 Sound.ENTITY_CREEPER_PRIMED:
@@ -61,28 +58,42 @@ public class OreListener implements Listener {
 
     }
 
-    // Event handler
     @EventHandler
     public void onBlockFromToEvent (BlockFormEvent event) {
 
         Block involvedBlock = event.getBlock();
+        Material newBlockType = event.getNewState().getType();
 
-        if (event.getNewState().getType() == Material.COBBLESTONE) {
+        switch(newBlockType) {
+            case COBBLESTONE:
+                event.setCancelled(true);
+                involvedBlock.setType(getRandomOre());
+                involvedBlock.getWorld().playSound(
+                        involvedBlock.getLocation(),
+                        this.soundToPlay,
+                        1,
+                        (float)1
+                );
+                break;
 
-            event.setCancelled(true);
-            involvedBlock.setType(getRandomOre());
-            involvedBlock.getWorld().playSound(
-                    involvedBlock.getLocation(),
-                    this.soundToPlay,
-                    1,
-                    (float)0.9
-            );
+            case STONE:
+            case OBSIDIAN:
+                event.setCancelled(true);
+                involvedBlock.setType(newBlockType);
+                involvedBlock.getWorld().playSound(
+                        involvedBlock.getLocation(),
+                        this.soundToPlay,
+                        1,
+                        (float)1
+                );
+                break;
+
+            default:
 
         }
 
     }
 
-    // Returns a random material based on ore ratio settings
     public Material getRandomOre() {
 
         Material materialToReturn;
