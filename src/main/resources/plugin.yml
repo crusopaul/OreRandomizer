@@ -1,5 +1,6 @@
 name: OreRandomizer
 version: "1.0"
+api-version: "1.14"
 main: io.github.crusopaul.OreRandomizer.OreRandomizer
 commands:
   ToggleCreeperSound:

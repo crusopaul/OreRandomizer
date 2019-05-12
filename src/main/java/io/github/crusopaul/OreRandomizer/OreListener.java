@@ -91,9 +91,8 @@ public class OreListener implements Listener {
                         (float)1
                 );
                 break;
-
             default:
-
+                break;
         }
 
     }

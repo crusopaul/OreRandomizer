@@ -37,7 +37,7 @@ public class GetOreRatio implements CommandExecutor {
                     sender.sendMessage(
                         ChatColor.BLUE +
                         oreSpecifier + ": " +
-                        this.plugin.getConfig().getString("RandomSpawnRatios." + oreSpecifier)
+                        this.plugin.getConfig().getInt("RandomSpawnRatios." + oreSpecifier)
                     );
 
                 } else {
@@ -52,35 +52,35 @@ public class GetOreRatio implements CommandExecutor {
 
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Cobblestone: " + this.plugin.getConfig().getString("RandomSpawnRatios.Cobblestone")
+                    "Cobblestone: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Cobblestone")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Coal: " + this.plugin.getConfig().getString("RandomSpawnRatios.Coal")
+                    "Coal: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Coal")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Diamond: " + this.plugin.getConfig().getString("RandomSpawnRatios.Diamond")
+                    "Diamond: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Diamond")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Emerald: " + this.plugin.getConfig().getString("RandomSpawnRatios.Emerald")
+                    "Emerald: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Emerald")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Gold: " + this.plugin.getConfig().getString("RandomSpawnRatios.Gold")
+                    "Gold: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Gold")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Iron: " + this.plugin.getConfig().getString("RandomSpawnRatios.Iron")
+                    "Iron: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Iron")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Lapis: " + this.plugin.getConfig().getString("RandomSpawnRatios.Lapis")
+                    "Lapis: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Lapis")
                 );
                 sender.sendMessage(
                     ChatColor.BLUE +
-                    "Redstone: " + this.plugin.getConfig().getString("RandomSpawnRatios.Redstone")
+                    "Redstone: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Redstone")
                 );
 
             }
