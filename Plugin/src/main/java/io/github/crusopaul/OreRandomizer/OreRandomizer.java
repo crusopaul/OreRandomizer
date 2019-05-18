@@ -1,11 +1,12 @@
 package io.github.crusopaul.OreRandomizer;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import io.github.crusopaul.VersionHandler.VersionInterface;
 
 public class OreRandomizer extends JavaPlugin {
 
     private OreListener listener;
-    private boolean loaded;
+    private VersionInterface versionHandler;
 
     public OreListener getListener() {
 
@@ -15,6 +16,20 @@ public class OreRandomizer extends JavaPlugin {
 
     @Override
     public void onEnable () {
+
+        String craftBukkitName = this.getServer().getClass().getPackage().getName();
+        String version = craftBukkitName.substring(craftBukkitName.lastIndexOf('.') + 1);
+
+        try {
+            final Class<?> versionHandlerInstance = Class.forName("io.github.crusopaul.VersionHandler." + version + ".VersionHandler");
+            if (VersionInterface.class.isAssignableFrom(versionHandlerInstance)) {
+                this.versionHandler = (VersionInterface) versionHandlerInstance.getConstructor().newInstance();
+            }
+        } catch (final Exception e) {
+            this.getLogger().severe("This version is not yet supported");
+            this.setEnabled(false);
+            return;
+        }
 
         this.saveDefaultConfig();
 
@@ -35,14 +50,14 @@ public class OreRandomizer extends JavaPlugin {
             this.listener = new OreListener(this);
             this.getServer().getPluginManager().registerEvents(this.listener, this);
             this.getLogger().info("OreRandomizer enabled.");
-            this.loaded = true;
 
         } catch (NullPointerException e) {
 
-            this.loaded = false;
-            this.getLogger().info("Could not instantiate commands or configuration file is invalid.");
+            this.getLogger().severe("Could not instantiate commands or configuration file is invalid.");
             this.getLogger().info(e.getMessage());
             this.getLogger().info("OreRandomizer not enabled.");
+            this.setEnabled(false);
+            return;
 
         }
 
@@ -51,11 +66,7 @@ public class OreRandomizer extends JavaPlugin {
     @Override
     public void onDisable () {
 
-        if (this.loaded) {
-
-            this.getLogger().info("OreRandomizer disabled.");
-
-        }
+        this.getLogger().info("OreRandomizer disabled.");
 
     }
 
