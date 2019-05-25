@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.crusopaul</groupId>
-    <artifactId>OreRandomizer-parent</artifactId>
-    <version>parent</version>
-    <packaging>pom</packaging>
+    <artifactId>v1_13</artifactId>
+    <version>1.13</version>
     <build>
         <plugins>
             <plugin>
@@ -21,12 +20,11 @@
         </plugins>
     </build>
 
-    <modules>
-        <module>VersionHandler</module>
-        <module>v1_14_1</module>
-        <module>v1_13</module>
-        <module>Plugin</module>
-    </modules>
+    <parent>
+        <groupId>io.github.crusopaul</groupId>
+        <artifactId>OreRandomizer-parent</artifactId>
+        <version>parent</version>
+    </parent>
 
     <repositories>
         <repository>
@@ -34,5 +32,22 @@
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
     </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.13-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>VersionHandler</artifactId>
+            <version>parent</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 
 </project>

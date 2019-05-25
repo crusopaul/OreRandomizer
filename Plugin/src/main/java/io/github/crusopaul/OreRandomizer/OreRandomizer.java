@@ -1,34 +1,52 @@
 package io.github.crusopaul.OreRandomizer;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import io.github.crusopaul.VersionHandler.VersionInterface;
 
+import java.io.File;
+
 public class OreRandomizer extends JavaPlugin {
 
-    private OreListener listener;
     private VersionInterface versionHandler;
-
-    public OreListener getListener() {
-
-        return this.listener;
-
-    }
 
     @Override
     public void onEnable () {
 
-        String craftBukkitName = this.getServer().getClass().getPackage().getName();
-        String version = craftBukkitName.substring(craftBukkitName.lastIndexOf('.') + 1);
+        String spigotAPIVersion = Bukkit.getVersion();
+        spigotAPIVersion = spigotAPIVersion.substring(spigotAPIVersion.indexOf("1."), spigotAPIVersion.indexOf(')'));
+
+        if (spigotAPIVersion.equals("1.14.1")) {
+            spigotAPIVersion = "v1_14_1";
+        }
+        else if (spigotAPIVersion.equals("1.14")) {
+            spigotAPIVersion = "v1_14";
+        }
+        else if (spigotAPIVersion.equals("1.13.2")) {
+            spigotAPIVersion = "v1_13_2";
+        }
+        else if (spigotAPIVersion.equals("1.13.1")) {
+            spigotAPIVersion = "v1_13_1";
+        }
+        else if (spigotAPIVersion.equals("1.13")) {
+            spigotAPIVersion = "v1_13";
+        }
 
         try {
-            final Class<?> versionHandlerInstance = Class.forName("io.github.crusopaul.VersionHandler." + version + ".VersionHandler");
-            if (VersionInterface.class.isAssignableFrom(versionHandlerInstance)) {
-                this.versionHandler = (VersionInterface) versionHandlerInstance.getConstructor().newInstance();
-            }
+
+            final Class<?> versionHandlerInstance = Class.forName("io.github.crusopaul." + spigotAPIVersion + ".VersionHandler");
+
+            this.versionHandler = (VersionInterface) versionHandlerInstance.getConstructor().newInstance();
+
+
         } catch (final Exception e) {
+
             this.getLogger().severe("This version is not yet supported");
+            this.getLogger().severe("Tried to load class io.github.crusopaul." + spigotAPIVersion + ".VersionHandler");
+            e.printStackTrace();
             this.setEnabled(false);
             return;
+
         }
 
         this.saveDefaultConfig();
@@ -44,20 +62,21 @@ public class OreRandomizer extends JavaPlugin {
                     break;
             }
 
-            this.getCommand("ToggleCreeperSound").setExecutor(new ToggleCreeperSound(this));
-            this.getCommand("SetOreRatio").setExecutor(new SetOreRatio(this));
-            this.getCommand("GetOreRatio").setExecutor(new GetOreRatio(this));
-            this.listener = new OreListener(this);
-            this.getServer().getPluginManager().registerEvents(this.listener, this);
+            this.getLogger().info("Class loaded: " + this.versionHandler);
+
+            this.versionHandler.instantiate(this.getConfig(), new File(this.getDataFolder(), "config.yml"));
+            this.getCommand("GetOreRatio").setExecutor(this.versionHandler.getGetOreRatio());
+            this.getCommand("SetOreRatio").setExecutor(this.versionHandler.getSetOreRatio());
+            this.getCommand("ToggleCreeperSound").setExecutor(this.versionHandler.getToggleCreeperSound());
+            this.getServer().getPluginManager().registerEvents(this.versionHandler.getOreListener(), this);
             this.getLogger().info("OreRandomizer enabled.");
 
-        } catch (NullPointerException e) {
+        } catch (final Exception e) {
 
             this.getLogger().severe("Could not instantiate commands or configuration file is invalid.");
-            this.getLogger().info(e.getMessage());
+            e.printStackTrace();
             this.getLogger().info("OreRandomizer not enabled.");
             this.setEnabled(false);
-            return;
 
         }
 

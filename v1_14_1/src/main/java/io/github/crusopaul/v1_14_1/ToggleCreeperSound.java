@@ -1,4 +1,4 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.v1_14_1;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -8,11 +8,11 @@ import org.bukkit.entity.Player;
 
 public class ToggleCreeperSound implements CommandExecutor {
 
-    private OreRandomizer plugin;
+    private OreListener oreListener;
 
-    ToggleCreeperSound(OreRandomizer pluginToSet) {
+    ToggleCreeperSound(OreListener oreListenerToSet) {
 
-        this.plugin = pluginToSet;
+        this.oreListener = oreListenerToSet;
 
     }
 
@@ -21,12 +21,13 @@ public class ToggleCreeperSound implements CommandExecutor {
 
         if (sender.hasPermission("OreRandomizer.ToggleCreeperSound") || !(sender instanceof Player)) {
 
-            this.plugin.getConfig().set(
-                "RandomizationSound.PlayCreeperPrimingSound",
-                !this.plugin.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound")
+            this.oreListener.getConfigFile().set(
+                    "RandomizationSound.PlayCreeperPrimingSound",
+                    !this.oreListener.getConfigFile().getBoolean("RandomizationSound.PlayCreeperPrimingSound")
             );
-            this.plugin.getListener().ToggleCreeperSound();
-            this.plugin.saveConfig();
+            this.oreListener.ToggleCreeperSound();
+            this.oreListener.saveConfigFile();
+            sender.sendMessage( "Creeper sound toggled.");
 
         }
         else {

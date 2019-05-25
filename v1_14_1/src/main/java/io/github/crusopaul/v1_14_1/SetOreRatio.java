@@ -1,5 +1,5 @@
-package io.github.crusopaul.OreRandomizer;
-
+package io.github.crusopaul.v1_14_1;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,11 +8,11 @@ import org.bukkit.entity.Player;
 
 public class SetOreRatio implements CommandExecutor {
 
-    private OreRandomizer plugin;
+    private OreListener oreListener;
 
-    SetOreRatio(OreRandomizer pluginToSet) {
+    SetOreRatio(OreListener oreListenerToSet) {
 
-        this.plugin = pluginToSet;
+        this.oreListener = oreListenerToSet;
 
     }
 
@@ -30,9 +30,10 @@ public class SetOreRatio implements CommandExecutor {
             String oreSpecifier = args[0].substring(0, 1).toUpperCase() +
                     args[0].substring(1).toLowerCase();
 
-            this.plugin.getConfig().set("RandomSpawnRatios." + oreSpecifier, Integer.parseInt(args[1]));
-            this.plugin.getListener().SetOreRatio();
-            this.plugin.saveConfig();
+            this.oreListener.getConfigFile().set("RandomSpawnRatios." + oreSpecifier, Integer.parseInt(args[1]));
+            this.oreListener.SetOreRatio();
+            this.oreListener.saveConfigFile();
+            sender.sendMessage( oreSpecifier +  " set to " + args[1] + ".");
 
         }
         else {
@@ -55,14 +56,14 @@ public class SetOreRatio implements CommandExecutor {
         correctNumberOfArgs = (args.length == 2);
 
         validOreReference = (
-            normalizedOreSpecifier.equals("cobblestone") ||
-            normalizedOreSpecifier.equals("coal") ||
-            normalizedOreSpecifier.equals("diamond") ||
-            normalizedOreSpecifier.equals("emerald") ||
-            normalizedOreSpecifier.equals("gold") ||
-            normalizedOreSpecifier.equals("iron") ||
-            normalizedOreSpecifier.equals("lapis") ||
-            normalizedOreSpecifier.equals("redstone")
+                normalizedOreSpecifier.equals("cobblestone") ||
+                        normalizedOreSpecifier.equals("coal") ||
+                        normalizedOreSpecifier.equals("diamond") ||
+                        normalizedOreSpecifier.equals("emerald") ||
+                        normalizedOreSpecifier.equals("gold") ||
+                        normalizedOreSpecifier.equals("iron") ||
+                        normalizedOreSpecifier.equals("lapis") ||
+                        normalizedOreSpecifier.equals("redstone")
         );
 
         try {

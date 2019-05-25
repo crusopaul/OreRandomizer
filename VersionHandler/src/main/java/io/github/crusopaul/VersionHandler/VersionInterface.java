@@ -1,12 +1,18 @@
 package io.github.crusopaul.VersionHandler;
 
-import org.bukkit.entity.Player;
-import org.bukkit.event.block.BlockFormEvent;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.Listener;
 
-public interface VersionInterface {
+import java.io.File;
 
-    public void sendMessage(Player player, String message);
-    public void BlockFormEvent(Block block, BlockState newState);
+public abstract class VersionInterface {
 
+    public abstract void instantiate(FileConfiguration configFileToSet, File configToSet);
+
+    public abstract CommandExecutor getGetOreRatio();
+    public abstract CommandExecutor getSetOreRatio();
+    public abstract CommandExecutor getToggleCreeperSound();
+    public abstract Listener getOreListener();
 
 }

@@ -20,6 +20,12 @@
         </plugins>
     </build>
 
+    <parent>
+        <groupId>io.github.crusopaul</groupId>
+        <artifactId>OreRandomizer-parent</artifactId>
+        <version>parent</version>
+    </parent>
+
     <repositories>
         <repository>
             <id>spigotmc-repo</id>
@@ -32,7 +38,8 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>LATEST</version>
-            <scope>provided</scope>
+            <type>jar</type>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
@@ -44,8 +51,16 @@
         </dependency>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
-            <artifactId>1.14.1-R0.1-SNAPSHOT</artifactId>
+            <artifactId>v1_14_1</artifactId>
             <version>1.14.1</version>
+            <type>jar</type>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>v1_13</artifactId>
+            <version>1.13</version>
             <type>jar</type>
             <scope>compile</scope>
             <optional>true</optional>

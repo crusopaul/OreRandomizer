@@ -1,18 +1,21 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.v1_14_1;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+
+import java.io.File;
 
 public class GetOreRatio implements CommandExecutor {
 
-    private OreRandomizer plugin;
+    private FileConfiguration config;
 
-    GetOreRatio(OreRandomizer pluginToSet) {
+    GetOreRatio(OreListener oreListenerToSet) {
 
-        this.plugin = pluginToSet;
+        this.config = oreListenerToSet.getConfigFile();
 
     }
 
@@ -30,14 +33,14 @@ public class GetOreRatio implements CommandExecutor {
             if (args.length > 0) {
 
                 String oreSpecifier = args[0].substring(0, 1).toUpperCase() +
-                    args[0].substring(1).toLowerCase();
+                        args[0].substring(1).toLowerCase();
 
-                if (this.plugin.getConfig().getString("RandomSpawnRatios." + oreSpecifier) != null) {
+                if (this.config.getString("RandomSpawnRatios." + oreSpecifier) != null) {
 
                     sender.sendMessage(
-                        ChatColor.BLUE +
-                        oreSpecifier + ": " +
-                        this.plugin.getConfig().getInt("RandomSpawnRatios." + oreSpecifier)
+                            ChatColor.BLUE +
+                                    oreSpecifier + ": " +
+                                    this.config.getInt("RandomSpawnRatios." + oreSpecifier)
                     );
 
                 } else {
@@ -51,36 +54,36 @@ public class GetOreRatio implements CommandExecutor {
             else {
 
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Cobblestone: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Cobblestone")
+                        ChatColor.BLUE +
+                                "Cobblestone: " + this.config.getInt("RandomSpawnRatios.Cobblestone")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Coal: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Coal")
+                        ChatColor.BLUE +
+                                "Coal: " + this.config.getInt("RandomSpawnRatios.Coal")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Diamond: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Diamond")
+                        ChatColor.BLUE +
+                                "Diamond: " + this.config.getInt("RandomSpawnRatios.Diamond")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Emerald: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Emerald")
+                        ChatColor.BLUE +
+                                "Emerald: " + this.config.getInt("RandomSpawnRatios.Emerald")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Gold: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Gold")
+                        ChatColor.BLUE +
+                                "Gold: " + this.config.getInt("RandomSpawnRatios.Gold")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Iron: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Iron")
+                        ChatColor.BLUE +
+                                "Iron: " + this.config.getInt("RandomSpawnRatios.Iron")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Lapis: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Lapis")
+                        ChatColor.BLUE +
+                                "Lapis: " + this.config.getInt("RandomSpawnRatios.Lapis")
                 );
                 sender.sendMessage(
-                    ChatColor.BLUE +
-                    "Redstone: " + this.plugin.getConfig().getInt("RandomSpawnRatios.Redstone")
+                        ChatColor.BLUE +
+                                "Redstone: " + this.config.getInt("RandomSpawnRatios.Redstone")
                 );
 
             }
@@ -103,14 +106,14 @@ public class GetOreRatio implements CommandExecutor {
         if (args.length > 0) {
             String normalizedOreSpecifier = args[0].toLowerCase();
             validOreReference = (
-                normalizedOreSpecifier.equals("cobblestone") ||
-                normalizedOreSpecifier.equals("coal") ||
-                normalizedOreSpecifier.equals("diamond") ||
-                normalizedOreSpecifier.equals("emerald") ||
-                normalizedOreSpecifier.equals("gold") ||
-                normalizedOreSpecifier.equals("iron") ||
-                normalizedOreSpecifier.equals("lapis") ||
-                normalizedOreSpecifier.equals("redstone")
+                    normalizedOreSpecifier.equals("cobblestone") ||
+                            normalizedOreSpecifier.equals("coal") ||
+                            normalizedOreSpecifier.equals("diamond") ||
+                            normalizedOreSpecifier.equals("emerald") ||
+                            normalizedOreSpecifier.equals("gold") ||
+                            normalizedOreSpecifier.equals("iron") ||
+                            normalizedOreSpecifier.equals("lapis") ||
+                            normalizedOreSpecifier.equals("redstone")
             );
         }
 

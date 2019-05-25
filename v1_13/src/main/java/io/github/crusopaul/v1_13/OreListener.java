@@ -1,20 +1,45 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.v1_13;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFormEvent;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
 
 public class OreListener implements Listener {
 
-    private OreRandomizer plugin;
+    private FileConfiguration configFile;
+    private File config;
     private Random rng;
     private int [] ratioPrecomputation;
     private Sound soundToPlay;
+
+    public FileConfiguration getConfigFile() {
+
+        return this.configFile;
+
+    }
+
+    public void saveConfigFile() {
+
+        try {
+
+            this.configFile.save(this.config);
+
+        } catch (IOException e) {
+
+            Bukkit.getLogger().info("Could not save to config file.");
+
+        }
+
+    }
 
     public Random getRng() {
 
@@ -32,31 +57,32 @@ public class OreListener implements Listener {
 
     public void SetOreRatio() {
 
-        this.ratioPrecomputation[0] = plugin.getConfig().getInt("RandomSpawnRatios.Cobblestone");
+        this.ratioPrecomputation[0] = this.configFile.getInt("RandomSpawnRatios.Cobblestone");
         this.ratioPrecomputation[1] = this.ratioPrecomputation[0] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Coal");
+                this.configFile.getInt("RandomSpawnRatios.Coal");
         this.ratioPrecomputation[2] = this.ratioPrecomputation[1] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Diamond");
+                this.configFile.getInt("RandomSpawnRatios.Diamond");
         this.ratioPrecomputation[3] = this.ratioPrecomputation[2] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Emerald");
+                this.configFile.getInt("RandomSpawnRatios.Emerald");
         this.ratioPrecomputation[4] = this.ratioPrecomputation[3] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Gold");
+                this.configFile.getInt("RandomSpawnRatios.Gold");
         this.ratioPrecomputation[5] = this.ratioPrecomputation[4] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Iron");
+                this.configFile.getInt("RandomSpawnRatios.Iron");
         this.ratioPrecomputation[6] = this.ratioPrecomputation[5] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Lapis");
+                this.configFile.getInt("RandomSpawnRatios.Lapis");
         this.ratioPrecomputation[7] = this.ratioPrecomputation[6] +
-                plugin.getConfig().getInt("RandomSpawnRatios.Redstone");
+                this.configFile.getInt("RandomSpawnRatios.Redstone");
 
     }
 
-    OreListener (OreRandomizer pluginToSet) {
+    OreListener (FileConfiguration configFileToSet, File configToSet) {
 
-        this.plugin = pluginToSet;
+        this.configFile = configFileToSet;
+        this.config = configToSet;
         this.rng = new Random();
         this.ratioPrecomputation = new int [8];
         SetOreRatio();
-        this.soundToPlay = plugin.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound")?
+        this.soundToPlay = this.configFile.getBoolean("RandomizationSound.PlayCreeperPrimingSound")?
                 Sound.ENTITY_CREEPER_PRIMED:
                 Sound.BLOCK_LAVA_EXTINGUISH;
 
