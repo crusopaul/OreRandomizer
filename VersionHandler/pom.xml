@@ -9,12 +9,6 @@
     <version>parent</version>
     <packaging>VersionHandler</packaging>
 
-    <parent>
-        <groupId>io.github.crusopaul</groupId>
-        <artifactId>OreRandomizer-parent</artifactId>
-        <version>parent</version>
-    </parent>
-
     <repositories>
         <repository>
             <id>spigotmc-repo</id>
@@ -27,7 +21,8 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>LATEST</version>
-            <scope>provided</scope>
+            <type>jar</type>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

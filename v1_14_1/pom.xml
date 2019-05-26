@@ -20,12 +20,6 @@
         </plugins>
     </build>
 
-    <parent>
-        <groupId>io.github.crusopaul</groupId>
-        <artifactId>OreRandomizer-parent</artifactId>
-        <version>parent</version>
-    </parent>
-
     <repositories>
         <repository>
             <id>spigotmc-repo</id>

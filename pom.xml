@@ -24,6 +24,9 @@
     <modules>
         <module>VersionHandler</module>
         <module>v1_14_1</module>
+        <module>v1_14</module>
+        <module>v1_13_2</module>
+        <module>v1_13_2</module>
         <module>v1_13</module>
         <module>Plugin</module>
     </modules>
@@ -52,6 +55,27 @@
         </dependency>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
+            <artifactId>v1_14</artifactId>
+            <version>1.14</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>v1_13_2</artifactId>
+            <version>1.13.2</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>v1_13_1</artifactId>
+            <version>1.13.1</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
             <artifactId>v1_13</artifactId>
             <version>1.13</version>
             <type>jar</type>
@@ -61,6 +85,13 @@
             <groupId>io.github.crusopaul</groupId>
             <artifactId>VersionHandler</artifactId>
             <version>parent</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>LATEST</version>
             <type>jar</type>
             <optional>true</optional>
         </dependency>
