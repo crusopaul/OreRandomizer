@@ -35,4 +35,35 @@
         </repository>
     </repositories>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>OreRandomizer</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>v1_14_1</artifactId>
+            <version>1.14.1</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>v1_13</artifactId>
+            <version>1.13</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.github.crusopaul</groupId>
+            <artifactId>VersionHandler</artifactId>
+            <version>parent</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
 </project>

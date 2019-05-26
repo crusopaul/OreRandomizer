@@ -1,0 +1,12 @@
+RandomSpawnRatios:
+  Cobblestone: 20
+  Coal: 5
+  Diamond: 1
+  Emerald: 1
+  Gold: 3
+  Iron: 4
+  Lapis: 2
+  Redstone: 8
+
+RandomizationSound:
+  PlayCreeperPrimingSound: true

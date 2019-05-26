@@ -6,40 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3c13e0d-f762-4ec1-99e0-9eaf75db2b7a" name="Default Changelist" comment="New approach to abstraction since NMS requires knowledge.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_13/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/VersionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/GetOreRatio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/OreListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/SetOreRatio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/ToggleCreeperSound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/v1_14_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OreRandomizer_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a3c13e0d-f762-4ec1-99e0-9eaf75db2b7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/OreRandomizer-parent.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OreRandomizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Plugin/OreRandomizer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/OreRandomizer (1).iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/v1_13.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Plugin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/GetOreRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/GetOreRatio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/OreListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/SetOreRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/SetOreRatio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/ToggleCreeperSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/ToggleCreeperSound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionHandler/VersionHandler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandler/VersionHandler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/crusopaul/OreRandomizer/OreListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/crusopaul/OreRandomizer/OreRandomizer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/crusopaul/OreRandomizer/ToggleCreeperSound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1_14_1/1.14.1-R0.1-SNAPSHOT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_14_1/v1_14_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -59,23 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/v1_13/v1_13.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v1_14_1/v1_14_1.iml">
           <provider selected="true" editor-type-id="text-editor" />
@@ -84,8 +37,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Plugin/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1_14_1/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -114,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VersionHandler/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="527">
+              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -138,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v1_13/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="153">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -147,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/OreListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="544">
               <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
             </state>
           </provider>
@@ -214,10 +185,10 @@
         <option value="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/ToggleCreeperSound.java" />
         <option value="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/GetOreRatio.java" />
         <option value="$PROJECT_DIR$/v1_13/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" />
-        <option value="$PROJECT_DIR$/Plugin/pom.xml" />
         <option value="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Plugin/pom.xml" />
       </list>
     </option>
   </component>
@@ -242,8 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,66 +228,6 @@
             <path>
               <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
               <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="Plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_13" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_13" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_13" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_13" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_13" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="v1_13" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -329,66 +238,6 @@
             <path>
               <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
               <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_14_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_14_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_14_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_14_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="v1_14_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="VersionHandler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="VersionHandler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="VersionHandler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="VersionHandler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
-              <item name="VersionHandler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="VersionHandler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -399,6 +248,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -412,7 +263,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Documents/minecraft_spigot_plugin_test/plugins" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.34712642" />
@@ -520,31 +371,47 @@
       <option name="project" value="LOCAL" />
       <updated>1557685327371</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="New approach to abstraction since NMS requires knowledge.">
+      <created>1558803431428</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558803431428</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49934125" visible="true" weight="0.26918977" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49934125" visible="true" weight="0.27452025" />
       <window_info id="Structure" order="6" sideWeight="0.50065875" side_tool="true" weight="0.4157549" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" sideWeight="0.49946696" visible="true" weight="0.17792068" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.17792068" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3290461" />
+      <window_info anchor="bottom" id="Dependency Viewer" sideWeight="0.4989339" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.49733475" weight="0.17792068" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.49946696" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49946696" weight="0.3290461" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -553,7 +420,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Module Dependencies" order="8" visible="true" weight="0.32995737" />
+      <window_info active="true" anchor="right" id="Module Dependencies" order="8" visible="true" weight="0.32995737" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -733,21 +600,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/v1_14_1/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="1173">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/v1_13/v1_13.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/v1_14_1.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java">
@@ -770,13 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VersionHandler/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/VersionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -787,37 +646,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v1_14_1/v1_14_1.iml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Plugin/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/v1_13/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/OreListener.java">
+    <entry file="file://$PROJECT_DIR$/VersionHandler/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -837,7 +704,6 @@
             <option name="proportions">
               <list>
                 <option value="0.34712642" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
