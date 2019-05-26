@@ -1,0 +1,36 @@
+name: OreRandomizer
+version: "1.0"
+main: io.github.crusopaul.OreRandomizer.OreRandomizer
+commands:
+  ToggleCreeperSound:
+    aliases: [or.sound]
+    description: Toggles the sound that plays when ore is randomly generated.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /ToggleCreeperSound"
+  SetOreRatio:
+    aliases: [or.set]
+    description: Sets the randomization ratio for the specified ore.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /SetOreRatio <ore> <ratio>"
+  GetOreRatio:
+    aliases: [or.get]
+    description: Displays the randomization ratio for all ores, or one ore if specified.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /GetOreRatio [ore]"
+permissions:
+  OreRandomizer.ToggleCreeperSound:
+    description: Allows you to use the command ToggleCreeperSound.
+    default: true
+  OreRandomizer.SetOreRatio:
+    description: Allows you to use the command SetOreRatio.
+    default: true
+  OreRandomizer.GetOreRatio:
+    description: Allows you to use the command GetOreRatio.
+    default: true
+  OreRandomizer.*:
+    description: Wildcard permission.
+    default: false
+    children:
+      OreRandomizer.ToggleCreeperSound: true
+      OreRandomizer.SetOreRatio: true
+      OreRandomizer.GetOreRatio: true

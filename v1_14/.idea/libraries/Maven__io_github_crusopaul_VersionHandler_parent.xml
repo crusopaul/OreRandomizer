@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.github.crusopaul:VersionHandler:parent">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/crusopaul/VersionHandler/parent/VersionHandler-parent.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/crusopaul/VersionHandler/parent/VersionHandler-parent-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/github/crusopaul/VersionHandler/parent/VersionHandler-parent-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
