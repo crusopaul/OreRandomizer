@@ -52,7 +52,9 @@ public class SetOreRatio implements CommandExecutor {
         boolean oreRatioIsIntAndInValidRange;
         String normalizedOreSpecifier = args[0].toLowerCase();
 
+
         correctNumberOfArgs = (args.length == 2);
+
 
         validOreReference = (
                 normalizedOreSpecifier.equals("cobblestone") ||
@@ -65,15 +67,24 @@ public class SetOreRatio implements CommandExecutor {
                         normalizedOreSpecifier.equals("redstone")
         );
 
-        try {
 
-            oreRatioIsIntAndInValidRange = (Integer.parseInt(args[1]) > -1);
+        if (correctNumberOfArgs) {
+            try {
 
-        } catch (NumberFormatException e) {
+                oreRatioIsIntAndInValidRange = (Integer.parseInt(args[1]) > -1);
+
+            } catch (NumberFormatException e) {
+
+                oreRatioIsIntAndInValidRange = false;
+
+            }
+        }
+        else {
 
             oreRatioIsIntAndInValidRange = false;
 
         }
+
 
         if (!correctNumberOfArgs) {
 
