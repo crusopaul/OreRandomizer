@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="OreRandomizer" target="6" />
-      <module name="v1_13" target="6" />
-      <module name="v1_13_1" target="6" />
-      <module name="v1_13_2" target="6" />
-      <module name="v1_14" target="6" />
-      <module name="v1_14_1" target="6" />
-      <module name="v1_8_8" target="6" />
-      <module name="VersionHandler" target="1.5" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="VersionHandler" />
+        <module name="v1_13_2" />
+        <module name="v1_13_1" />
+        <module name="OreRandomizer" />
+        <module name="v1_8_8" />
+        <module name="v1_14_1" />
+        <module name="v1_14" />
+        <module name="v1_13" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="6">
+      <module name="OreRandomizer (1)" target="6" />
+      <module name="v1_13 (1)" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>

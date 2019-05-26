@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="OreRandomizer:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a3c13e0d-f762-4ec1-99e0-9eaf75db2b7a" name="Default Changelist" comment="Fixed parent dependency.">
+      <change afterPath="$PROJECT_DIR$/.idea/OreRandomizer-parent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OreRandomizer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OreRandomizer/target/classes/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OreRandomizer/target/classes/io/github/crusopaul/OreRandomizer/OreRandomizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OreRandomizer/target/classes/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VersionHandler/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VersionHandler/target/classes/io/github/crusopaul/VersionHandler/VersionInterface.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/OreRandomizer_parent_jar/OreRandomizer-parent.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/SetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/VersionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/GetOreRatio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/OreListener$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/OreListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/SetOreRatio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/ToggleCreeperSound.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/VersionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/GetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/OreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/SetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/ToggleCreeperSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/VersionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/GetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/OreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/SetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/ToggleCreeperSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/VersionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__io_github_crusopaul_VersionHandler_parent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_1_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/GetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/OreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/SetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/ToggleCreeperSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/VersionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14/src/main/v1_14_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__io_github_crusopaul_VersionHandler_parent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_13_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__org_spigotmc_spigot_api_1_14_1_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/GetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/OreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/SetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/ToggleCreeperSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/src/main/v1_14_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/target/classes/io/github/crusopaul/v1_14_1/GetOreRatio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/target/classes/io/github/crusopaul/v1_14_1/OreListener$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/target/classes/io/github/crusopaul/v1_14_1/OreListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/target/classes/io/github/crusopaul/v1_14_1/SetOreRatio.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/target/classes/io/github/crusopaul/v1_14_1/ToggleCreeperSound.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_14_1/target/classes/io/github/crusopaul/v1_14_1/VersionHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__com_google_guava_guava_17_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__io_github_crusopaul_VersionHandler_parent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_8_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__org_avaje_ebean_2_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__org_spigotmc_spigot_api_1_8_8_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/libraries/Maven__org_yaml_snakeyaml_1_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/GetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/OreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/ToggleCreeperSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/VersionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OreRandomizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OreRandomizer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OreRandomizer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OreRandomizer__1__jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugin/OreRandomizer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VersionHandler/VersionHandler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandler/VersionHandler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/GetOreRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/GetOreRatio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/OreListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/OreListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/SetOreRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/SetOreRatio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/ToggleCreeperSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/ToggleCreeperSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/OreRandomizer/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/OreRandomizer/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1_13/v1_13.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13/v1_13.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1_13_1/v1_13_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13_1/v1_13_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1_13_2/v1_13_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_13_2/v1_13_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1_14/v1_14.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_14/v1_14.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1_14_1/v1_14_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_14_1/v1_14_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1_8_8/v1_8_8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/v1_8_8/v1_8_8.iml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/Plugin/target/" />
+    <ignored path="$PROJECT_DIR$/VersionHandler/target/" />
+    <ignored path="$PROJECT_DIR$/1.14.1-R0.1-SNAPSHOT/target/" />
+    <ignored path="$PROJECT_DIR$/v1_14_1/target/" />
+    <ignored path="$PROJECT_DIR$/v1_13/target/" />
+    <ignored path="$PROJECT_DIR$/v1_14/target/" />
+    <ignored path="$PROJECT_DIR$/v1_13_2/target/" />
+    <ignored path="$PROJECT_DIR$/v1_13_1/target/" />
+    <ignored path="$PROJECT_DIR$/v1_8_8/target/" />
+    <ignored path="$PROJECT_DIR$/OreRandomizer/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/SetOreRatio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OreRandomizer/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1_8_8/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>release</find>
+      <find>//</find>
+      <find>switch</find>
+      <find>this.plugin</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="91494735e17b794251997f0e5b0b02effb484e78" />
+      </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/setOreRatio.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/ToggleCreeperSound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/OreListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/crusopaul/OreRandomizer/GetOreRatio.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/1.14.1-R0.1-SNAPSHOT/src/main/java/io.github.crusopaul/VersionHandler.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io.github.crusopaul.VersionHandler/VersionInterface.java" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io.github.crusopaul/VersionInterface.java" />
+        <option value="$PROJECT_DIR$/1.14.1-R0.1-SNAPSHOT/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java" />
+        <option value="$PROJECT_DIR$/1.14.1-R0.1-SNAPSHOT/pom.xml" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/ToggleCreeperSound.java" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/OreRandomizer.java" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/OreRandomizerInterface.java" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/OreListenerInterface.java" />
+        <option value="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/GetOreRatio.java" />
+        <option value="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java" />
+        <option value="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/OreListener.java" />
+        <option value="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/ToggleCreeperSound.java" />
+        <option value="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/GetOreRatio.java" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" />
+        <option value="$PROJECT_DIR$/v1_14_1/pom.xml" />
+        <option value="$PROJECT_DIR$/v1_14/pom.xml" />
+        <option value="$PROJECT_DIR$/v1_13_2/pom.xml" />
+        <option value="$PROJECT_DIR$/v1_13_1/pom.xml" />
+        <option value="$PROJECT_DIR$/v1_13/pom.xml" />
+        <option value="$PROJECT_DIR$/Plugin/pom.xml" />
+        <option value="$PROJECT_DIR$/VersionHandler/pom.xml" />
+        <option value="$PROJECT_DIR$/v1_8_8/pom.xml" />
+        <option value="$PROJECT_DIR$/v1_8_8/v1_8_8.iml" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" />
+        <option value="$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/OreListener.java" />
+        <option value="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/GetOreRatio.java" />
+        <option value="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/OreListener.java" />
+        <option value="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/ToggleCreeperSound.java" />
+        <option value="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/VersionHandler.java" />
+        <option value="$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="orerandomizer" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.34712642" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\source\OreRandomizer" />
+      <recent name="D:\source\OreRandomizer\v1_14" />
+      <recent name="D:\source\OreRandomizer\v1_13" />
+      <recent name="D:\source\OreRandomizer\v1_13\src\main\java\io\github\crusopaul\v1_13" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\source\OreRandomizer\Plugin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.All in OreRandomizer-parent">
+    <configuration name="All in OreRandomizer-parent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OreRandomizer-parent" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="v1_13 build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/v1_13" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="v1_14 build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/v1_14" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in OreRandomizer-parent" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Paul Caruso\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3c13e0d-f762-4ec1-99e0-9eaf75db2b7a" name="Default Changelist" comment="" />
+      <created>1557064317430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557064317430</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit.">
+      <created>1557595831468</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557595831468</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Sound normalization and comment removal.">
+      <created>1557673191148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557673191148</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Get and set commands for ore randomization ratios.">
+      <created>1557681623136</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1557681623136</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added config error checking/handling and exception handling for plugin.">
+      <created>1557685327371</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557685327371</updated>
+    </task>
+    <task id="LOCAL-00005" summary="New approach to abstraction since NMS requires knowledge.">
+      <created>1558803431428</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558803431428</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed module dependencies with dummyj">
+      <created>1558881317290</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558881317290</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added support for 1.13, 1.13.1, 1.13.2, 1.14, and 1.14.1">
+      <created>1558888790075</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558888790075</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed SetOreRatio argument parsing.">
+      <created>1558890823459</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1558890823459</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49934125" visible="true" weight="0.2489339" />
+      <window_info id="Structure" order="6" sideWeight="0.50065875" side_tool="true" weight="0.4157549" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4968017" weight="0.17577706" />
+      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49946696" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.3279743" />
+      <window_info anchor="bottom" id="Version Control" order="3" sideWeight="0.4989339" weight="0.3290461" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49946696" weight="0.3290461" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" sideWeight="0.4989339" weight="0.3290461" />
+      <window_info anchor="right" id="Theme Preview" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Module Dependencies" order="8" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Initial commit." />
+    <MESSAGE value="Sound normalization and comment removal." />
+    <MESSAGE value="Get and set commands for ore randomization ratios." />
+    <MESSAGE value="Added config error checking/handling and exception handling for plugin." />
+    <MESSAGE value="New approach to abstraction since NMS requires knowledge." />
+    <MESSAGE value="Fixed module dependencies with dummyj" />
+    <MESSAGE value="Added support for 1.13, 1.13.1, 1.13.2, 1.14, and 1.14.1" />
+    <MESSAGE value="Fixed SetOreRatio argument parsing." />
+    <MESSAGE value="Fixed parent dependency." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed parent dependency." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/io/github/crusopaul/OreRandomizer/ToggleCreeperSound.java" />
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_14_1/GetOreRatio.java" />
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/V1_13.java" />
+    <entry file="file://$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OreRandomizer-parent.iml" />
+    <entry file="file://$PROJECT_DIR$/OreRandomizer/OreRandomizer.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/src/main/v1_14_1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="86" column="44" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/v1_14_1.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14.java" />
+    <entry file="file://$PROJECT_DIR$/v1_14/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_2/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VersionHandler/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/v1_8_8.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/v1_13.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_1/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_1/src/main/java/io/github/crusopaul/v1_13_1/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" selection-start-line="7" selection-end-line="110" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14/src/main/java/io/github/crusopaul/v1_14/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-469">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_14_1/src/main/java/io/github/crusopaul/v1_14_1/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13_2/src/main/java/io/github/crusopaul/v1_13_2/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/target/classes/io/github/crusopaul/v1_13/SetOreRatio.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#2882#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_13/src/main/java/io/github/crusopaul/v1_13/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="993">
+          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/src/main/java/io/github/crusopaul/v1_8_8/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_8/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OreRandomizer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>OreRandomizer:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34712642" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Minecraft (OreRandomizer)|Minecraft</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34712642" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34712642" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34712642" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>OreRandomizer</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34712642" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.code.gson:gson:2.8.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.34712642" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
