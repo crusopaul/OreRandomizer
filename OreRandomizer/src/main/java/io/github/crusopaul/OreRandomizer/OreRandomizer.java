@@ -11,28 +11,27 @@ public class OreRandomizer extends JavaPlugin {
     private VersionInterface versionHandler;
 
     @Override
-    public void onEnable () {
+    public void onEnable() {
 
         String spigotAPIVersion = Bukkit.getVersion();
         spigotAPIVersion = spigotAPIVersion.substring(spigotAPIVersion.indexOf("1."), spigotAPIVersion.indexOf(')'));
 
-        if (spigotAPIVersion.equals("1.14.1")) {
-            spigotAPIVersion = "v1_14_1";
-        }
-        else if (spigotAPIVersion.equals("1.14")) {
-            spigotAPIVersion = "v1_14";
-        }
-        else if (spigotAPIVersion.equals("1.13.2")) {
-            spigotAPIVersion = "v1_13_2";
-        }
-        else if (spigotAPIVersion.equals("1.13.1")) {
-            spigotAPIVersion = "v1_13_1";
-        }
-        else if (spigotAPIVersion.equals("1.13")) {
-            spigotAPIVersion = "v1_13";
-        }
-        else if (spigotAPIVersion.equals("1.8.8")) {
-            spigotAPIVersion = "v1_8_8";
+        if (
+            spigotAPIVersion.equals("1.14.2") ||
+            spigotAPIVersion.equals("1.14.1") ||
+            spigotAPIVersion.equals("1.14") ||
+            spigotAPIVersion.equals("1.13.2") ||
+            spigotAPIVersion.equals("1.13.1") ||
+            spigotAPIVersion.equals("1.13") ||
+            spigotAPIVersion.equals("1.12.2") ||
+            spigotAPIVersion.equals("1.12.1") ||
+            spigotAPIVersion.equals("1.12") ||
+            spigotAPIVersion.equals("1.11.2") ||
+            spigotAPIVersion.equals("1.11")
+        ) {
+
+            spigotAPIVersion = "v1_14_2";
+
         }
 
         try {
@@ -45,7 +44,6 @@ public class OreRandomizer extends JavaPlugin {
         } catch (final Exception e) {
 
             this.getLogger().severe("This version is not yet supported");
-            this.getLogger().severe("Tried to load class io.github.crusopaul." + spigotAPIVersion + ".VersionHandler");
             e.printStackTrace();
             this.setEnabled(false);
             return;
@@ -56,7 +54,7 @@ public class OreRandomizer extends JavaPlugin {
 
         try {
 
-            switch(validateConfig()) {
+            switch (validateConfig()) {
                 case -1:
                     throw new NullPointerException("One or more of the config keys is missing or cannot be cast as the expected type.");
                 case 0:
@@ -64,8 +62,6 @@ public class OreRandomizer extends JavaPlugin {
                 default:
                     break;
             }
-
-            this.getLogger().info("Class loaded: " + this.versionHandler);
 
             this.versionHandler.instantiate(this.getConfig(), new File(this.getDataFolder(), "config.yml"));
             this.getCommand("GetOreRatio").setExecutor(this.versionHandler.getGetOreRatio());
@@ -86,7 +82,7 @@ public class OreRandomizer extends JavaPlugin {
     }
 
     @Override
-    public void onDisable () {
+    public void onDisable() {
 
         this.getLogger().info("OreRandomizer disabled.");
 
@@ -94,7 +90,7 @@ public class OreRandomizer extends JavaPlugin {
 
     public int validateConfig() {
 
-        int [] ratios = new int[8];
+        int[] ratios = new int[8];
 
         try {
 

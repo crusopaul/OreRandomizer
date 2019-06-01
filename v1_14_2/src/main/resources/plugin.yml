@@ -1,0 +1,4 @@
+name: V1_14_2
+version: ${project.version}
+main: io.github.crusopaul.v1_14_2.V1_14_2
+api-version: 1.13
