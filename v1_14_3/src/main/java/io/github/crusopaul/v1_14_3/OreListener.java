@@ -1,4 +1,4 @@
-package io.github.crusopaul.v1_14_2;
+package io.github.crusopaul.v1_14_3;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -12,6 +12,7 @@ import org.bukkit.event.block.BlockFormEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
+import java.util.List;
 
 public class OreListener implements Listener {
 
@@ -20,6 +21,7 @@ public class OreListener implements Listener {
     private Random rng;
     private int [] ratioPrecomputation;
     private Sound soundToPlay;
+    private List<String> AllowedWorlds;
 
     public FileConfiguration getConfigFile() {
 
@@ -75,6 +77,24 @@ public class OreListener implements Listener {
 
     }
 
+    public List<String> GetAllowedWorlds() {
+
+        return this.AllowedWorlds;
+
+    }
+
+    public void RemoveAllowedWorld(int i) {
+
+        this.AllowedWorlds.remove(i);
+
+    }
+
+    public void AddNewWorld(String worldToAdd) {
+
+        this.AllowedWorlds.add(worldToAdd);
+
+    }
+
     OreListener (FileConfiguration configFileToSet, File configToSet) {
 
         this.configFile = configFileToSet;
@@ -85,6 +105,7 @@ public class OreListener implements Listener {
         this.soundToPlay = this.configFile.getBoolean("RandomizationSound.PlayCreeperPrimingSound")?
                 Sound.ENTITY_CREEPER_PRIMED:
                 Sound.BLOCK_LAVA_EXTINGUISH;
+        this.AllowedWorlds = this.configFile.getStringList("AllowedWorlds");
 
     }
 
@@ -92,6 +113,24 @@ public class OreListener implements Listener {
     public void onBlockFromToEvent (BlockFormEvent event) {
 
         Block involvedBlock = event.getBlock();
+
+        boolean validWorld = false;
+        for (int i = 0; i < AllowedWorlds.size(); i++) {
+
+            if (AllowedWorlds.get(i).equals(involvedBlock.getWorld().getName())) {
+
+                validWorld = true;
+
+            }
+
+        }
+
+        if (!validWorld) {
+
+            return;
+
+        }
+
         Material newBlockType = event.getNewState().getType();
 
         switch(newBlockType) {

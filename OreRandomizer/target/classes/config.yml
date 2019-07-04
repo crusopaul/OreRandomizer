@@ -10,3 +10,6 @@ RandomSpawnRatios:
 
 RandomizationSound:
   PlayCreeperPrimingSound: true
+
+AllowedWorlds:
+  - world

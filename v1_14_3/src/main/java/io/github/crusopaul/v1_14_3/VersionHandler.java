@@ -1,4 +1,4 @@
-package io.github.crusopaul.v1_14_2;
+package io.github.crusopaul.v1_14_3;
 
 import io.github.crusopaul.VersionHandler.VersionInterface;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -9,6 +9,9 @@ public class VersionHandler extends VersionInterface {
 
     private GetOreRatio getOreRatio;
     private SetOreRatio setOreRatio;
+    private AddNewWorld addNewWorld;
+    private GetAllowedWorlds getAllowedWorlds;
+    private RemoveAllowedWorld removeAllowedWorld;
     private ToggleCreeperSound toggleCreeperSound;
     private OreListener oreListener;
 
@@ -18,10 +21,14 @@ public class VersionHandler extends VersionInterface {
         this.oreListener = new OreListener(configFileToSet, configToSet);
         this.getOreRatio = new GetOreRatio(this.oreListener);
         this.setOreRatio = new SetOreRatio(this.oreListener);
+        this.addNewWorld = new AddNewWorld(this.oreListener);
+        this.getAllowedWorlds = new GetAllowedWorlds(this.oreListener);
+        this.removeAllowedWorld = new RemoveAllowedWorld(this.oreListener);
         this.toggleCreeperSound = new ToggleCreeperSound(this.oreListener);
 
     }
 
+    @Override
     public GetOreRatio getGetOreRatio() {
 
         return this.getOreRatio;
@@ -32,6 +39,27 @@ public class VersionHandler extends VersionInterface {
     public SetOreRatio getSetOreRatio() {
 
         return this.setOreRatio;
+
+    }
+
+    @Override
+    public AddNewWorld getAddNewWorld() {
+
+        return this.addNewWorld;
+
+    }
+
+    @Override
+    public GetAllowedWorlds getGetAllowedWorlds() {
+
+        return this.getAllowedWorlds;
+
+    }
+
+    @Override
+    public RemoveAllowedWorld getRemoveAllowedWorld () {
+
+        return this.removeAllowedWorld;
 
     }
 

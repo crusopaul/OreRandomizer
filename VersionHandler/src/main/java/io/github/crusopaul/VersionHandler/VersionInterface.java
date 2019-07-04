@@ -12,6 +12,9 @@ public abstract class VersionInterface {
 
     public abstract CommandExecutor getGetOreRatio();
     public abstract CommandExecutor getSetOreRatio();
+    public abstract CommandExecutor getAddNewWorld();
+    public abstract CommandExecutor getGetAllowedWorlds();
+    public abstract CommandExecutor getRemoveAllowedWorld();
     public abstract CommandExecutor getToggleCreeperSound();
     public abstract Listener getOreListener();
 

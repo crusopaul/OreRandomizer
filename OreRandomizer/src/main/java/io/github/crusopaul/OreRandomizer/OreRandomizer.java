@@ -17,6 +17,7 @@ public class OreRandomizer extends JavaPlugin {
         spigotAPIVersion = spigotAPIVersion.substring(spigotAPIVersion.indexOf("1."), spigotAPIVersion.indexOf(')'));
 
         if (
+            spigotAPIVersion.equals("1.14.3") ||
             spigotAPIVersion.equals("1.14.2") ||
             spigotAPIVersion.equals("1.14.1") ||
             spigotAPIVersion.equals("1.14") ||
@@ -30,7 +31,7 @@ public class OreRandomizer extends JavaPlugin {
             spigotAPIVersion.equals("1.11")
         ) {
 
-            spigotAPIVersion = "v1_14_2";
+            spigotAPIVersion = "v1_14_3";
 
         }
 
@@ -66,6 +67,9 @@ public class OreRandomizer extends JavaPlugin {
             this.versionHandler.instantiate(this.getConfig(), new File(this.getDataFolder(), "config.yml"));
             this.getCommand("GetOreRatio").setExecutor(this.versionHandler.getGetOreRatio());
             this.getCommand("SetOreRatio").setExecutor(this.versionHandler.getSetOreRatio());
+            this.getCommand("AddNewWorld").setExecutor(this.versionHandler.getAddNewWorld());
+            this.getCommand("GetAllowedWorlds").setExecutor(this.versionHandler.getGetAllowedWorlds());
+            this.getCommand("RemoveAllowedWorld").setExecutor(this.versionHandler.getRemoveAllowedWorld());
             this.getCommand("ToggleCreeperSound").setExecutor(this.versionHandler.getToggleCreeperSound());
             this.getServer().getPluginManager().registerEvents(this.versionHandler.getOreListener(), this);
             this.getLogger().info("OreRandomizer enabled.");
@@ -74,7 +78,6 @@ public class OreRandomizer extends JavaPlugin {
 
             this.getLogger().severe("Could not instantiate commands or configuration file is invalid.");
             e.printStackTrace();
-            this.getLogger().info("OreRandomizer not enabled.");
             this.setEnabled(false);
 
         }

@@ -1,5 +1,5 @@
 name: OreRandomizer
-version: "1.0"
+version: "1.1"
 main: io.github.crusopaul.OreRandomizer.OreRandomizer
 commands:
   ToggleCreeperSound:
@@ -17,6 +17,21 @@ commands:
     description: Displays the randomization ratio for all ores, or one ore if specified.
     permission-message: You do not have permission to use this command.
     usage: "Usage: /GetOreRatio [ore]"
+  AddNewWorld:
+    aliases: [or.addWorld]
+    description: Allows OreRandomizer to be active for a specified world.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /AddNewWorld <world>"
+  GetAllowedWorlds:
+    aliases: [or.worlds]
+    description: Displays a list or individual world that OreRandomizer is active for.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /GetAllowedWorlds [world]"
+  RemoveAllowedWorld:
+    aliases: [or.remWorld]
+    description: Makes OreRandomizer inactive for a specified world.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /RemoveAllowedWorld <world>"
 permissions:
   OreRandomizer.ToggleCreeperSound:
     description: Allows you to use the command ToggleCreeperSound.
@@ -27,6 +42,15 @@ permissions:
   OreRandomizer.GetOreRatio:
     description: Allows you to use the command GetOreRatio.
     default: true
+  OreRandomizer.AddNewWorld:
+    description: Allows you to use the command AddNewWorld.
+    default: true
+  OreRandomizer.GetAllowedWorlds:
+    description: Allows you to use the command GetAllowedWorlds.
+    default: true
+  OreRandomizer.RemoveAllowedWorld:
+    description: Allows you to use the command RemoveAllowedWorld.
+    default: true
   OreRandomizer.*:
     description: Wildcard permission.
     default: false
@@ -34,3 +58,6 @@ permissions:
       OreRandomizer.ToggleCreeperSound: true
       OreRandomizer.SetOreRatio: true
       OreRandomizer.GetOreRatio: true
+      OreRandomizer.AddNewWorld: true
+      OreRandomizer.GetAllowedWorlds: true
+      OreRandomizer.RemoveAllowedWorld: true

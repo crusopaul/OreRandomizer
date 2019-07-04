@@ -7,9 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="OreRandomizer" />
-        <module name="v1_8_8" />
-        <module name="v1_14_2" />
         <module name="VersionHandler" />
+        <module name="v1_8_8" />
+        <module name="v1_14_3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="6">
