@@ -1,4 +1,4 @@
-package io.github.crusopaul.v1_14_3;
+package io.github.crusopaul.vlatest;
 
 import io.github.crusopaul.VersionHandler.VersionInterface;
 import org.bukkit.configuration.file.FileConfiguration;

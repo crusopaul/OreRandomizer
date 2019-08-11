@@ -1,4 +1,4 @@
-package io.github.crusopaul.v1_14_3;
+package io.github.crusopaul.vlatest;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
