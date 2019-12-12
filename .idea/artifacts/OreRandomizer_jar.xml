@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="OreRandomizer:jar">
-    <output-path>D:/Documents/minecraft_spigot_plugin_test/plugins</output-path>
+    <output-path>D:/Documents/minecraft_spigot_plugin_test/plugins/</output-path>
     <root id="archive" name="OreRandomizer.jar">
       <element id="module-output" name="OreRandomizer" />
       <element id="module-output" name="vlatest" />
