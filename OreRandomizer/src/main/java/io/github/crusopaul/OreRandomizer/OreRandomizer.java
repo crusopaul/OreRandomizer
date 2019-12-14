@@ -5,6 +5,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import io.github.crusopaul.VersionHandler.VersionInterface;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Map;
 
 public class OreRandomizer extends JavaPlugin {
 
@@ -17,7 +19,6 @@ public class OreRandomizer extends JavaPlugin {
         spigotAPIVersion = spigotAPIVersion.substring(spigotAPIVersion.indexOf("1."), spigotAPIVersion.indexOf(')'));
 
         if (
-            spigotAPIVersion.equals("1.15") ||
             spigotAPIVersion.equals("1.14.4") ||
             spigotAPIVersion.equals("1.14.3") ||
             spigotAPIVersion.equals("1.14.2") ||
@@ -33,7 +34,14 @@ public class OreRandomizer extends JavaPlugin {
             spigotAPIVersion.equals("1.11")
         ) {
 
-            spigotAPIVersion = "vlatest";
+            spigotAPIVersion = "vPreBees";
+
+        }
+        else if (
+            spigotAPIVersion.equals("1.15")
+        ) {
+
+            spigotAPIVersion = "vBees";
 
         }
 
@@ -57,7 +65,9 @@ public class OreRandomizer extends JavaPlugin {
 
         try {
 
-            switch (validateConfig()) {
+            switch (validateConfig(spigotAPIVersion)) {
+                case -2:
+                    throw new NullPointerException("The config key \"RandomizationSound\" is missing or does not match a known sound.");
                 case -1:
                     throw new NullPointerException("One or more of the config keys is missing or cannot be cast as the expected type.");
                 case 0:
@@ -73,6 +83,8 @@ public class OreRandomizer extends JavaPlugin {
             this.getCommand("GetAllowedWorlds").setExecutor(this.versionHandler.getGetAllowedWorlds());
             this.getCommand("RemoveAllowedWorld").setExecutor(this.versionHandler.getRemoveAllowedWorld());
             this.getCommand("ToggleCreeperSound").setExecutor(this.versionHandler.getToggleCreeperSound());
+            this.getCommand("GetRandomizationSound").setExecutor(this.versionHandler.getGetRandomizationSound());
+            this.getCommand("SetRandomizationSound").setExecutor(this.versionHandler.getSetRandomizationSound());
             this.getServer().getPluginManager().registerEvents(this.versionHandler.getOreListener(), this);
             this.getLogger().info("OreRandomizer enabled.");
 
@@ -93,9 +105,164 @@ public class OreRandomizer extends JavaPlugin {
 
     }
 
-    public int validateConfig() {
+    public int validateConfig(String spigotAPIVersion) {
 
         int[] ratios = new int[8];
+        boolean playCreeperSound;
+        String soundToPlay;
+
+        playCreeperSound = this.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound");
+
+        if ( spigotAPIVersion.equals("vPreBees") ) {
+
+            if ( !this.getConfig().isSet("RandomizationSound.PlayCreeperPrimingSound") ) {
+
+                soundToPlay = this.getConfig().getString("RandomizationSound");
+
+                if (soundToPlay == null) {
+
+                    return -2;
+
+                }
+                else if (
+                       !soundToPlay.toUpperCase().equals("SSSS") &&
+                                !soundToPlay.toUpperCase().equals("NORMAL")
+                ) {
+
+                    return -2;
+
+                }
+
+            }
+            else if (playCreeperSound) {
+
+                this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
+
+                }
+
+                this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
+                this.getConfig().set("RandomizationSound", "Ssss");
+
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not save to config file.");
+
+                }
+
+            }
+            else {
+
+                this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
+
+                }
+                this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
+                this.getConfig().set("RandomizationSound", "normal");
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not save to config file.");
+
+                }
+
+            }
+
+        }
+        else if ( spigotAPIVersion.equals("vBees") ) {
+
+            if ( !this.getConfig().isSet("RandomizationSound.PlayCreeperPrimingSound") ) {
+
+                soundToPlay = this.getConfig().getString("RandomizationSound");
+
+                if (soundToPlay == null) {
+
+                    return -2;
+
+                }
+                else if (
+                    !soundToPlay.toUpperCase().equals("BUZZ") &&
+                            !soundToPlay.toUpperCase().equals("SSSS") &&
+                            !soundToPlay.toUpperCase().equals("NORMAL")
+                ) {
+
+                    return -2;
+
+                }
+
+            }
+            else if (playCreeperSound) {
+
+                this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
+
+                }
+                this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
+                this.getConfig().set("RandomizationSound", "Ssss");
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not save to config file.");
+
+                }
+
+            }
+            else {
+
+                this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
+
+                }
+                this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
+                this.getConfig().set("RandomizationSound", "normal");
+                try {
+
+                    this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
+
+                } catch (IOException e) {
+
+                    Bukkit.getLogger().info("Could not save to config file.");
+
+                }
+
+            }
+
+        }
 
         try {
 
@@ -108,23 +275,20 @@ public class OreRandomizer extends JavaPlugin {
             ratios[6] = this.getConfig().getInt("RandomSpawnRatios.Lapis");
             ratios[7] = this.getConfig().getInt("RandomSpawnRatios.Redstone");
 
-            this.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound");
-
             if (
-                ratios[0] > -1 &&
-                ratios[1] > -1 &&
-                ratios[2] > -1 &&
-                ratios[3] > -1 &&
-                ratios[4] > -1 &&
-                ratios[5] > -1 &&
-                ratios[6] > -1 &&
-                ratios[7] > -1
+                    ratios[0] > -1 &&
+                            ratios[1] > -1 &&
+                            ratios[2] > -1 &&
+                            ratios[3] > -1 &&
+                            ratios[4] > -1 &&
+                            ratios[5] > -1 &&
+                            ratios[6] > -1 &&
+                            ratios[7] > -1
             ) {
 
-              return 1;
+                return 1;
 
-            }
-            else {
+            } else {
 
                 return 0;
 

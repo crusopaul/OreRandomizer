@@ -16,6 +16,8 @@ public abstract class VersionInterface {
     public abstract CommandExecutor getGetAllowedWorlds();
     public abstract CommandExecutor getRemoveAllowedWorld();
     public abstract CommandExecutor getToggleCreeperSound();
+    public abstract CommandExecutor getGetRandomizationSound();
+    public abstract CommandExecutor getSetRandomizationSound();
     public abstract Listener getOreListener();
 
 }

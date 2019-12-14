@@ -3,10 +3,17 @@ version: "1.1"
 main: io.github.crusopaul.OreRandomizer.OreRandomizer
 commands:
   ToggleCreeperSound:
-    aliases: [or.sound]
-    description: Toggles the sound that plays when ore is randomly generated.
+    description: (Deprecated) Toggles the sound that plays when ore is randomly generated.
     permission-message: You do not have permission to use this command.
     usage: "Usage: /ToggleCreeperSound"
+  GetRandomizationSound:
+    description: Displays the sound that plays when ore is randomly generated.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /GetRandomizationSound"
+  SetRandomizationSound:
+    description: Sets the sound that plays when ore is randomly generated for the specified sound.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /SetRandomizationSound <sound>"
   SetOreRatio:
     aliases: [or.set]
     description: Sets the randomization ratio for the specified ore.
@@ -18,23 +25,26 @@ commands:
     permission-message: You do not have permission to use this command.
     usage: "Usage: /GetOreRatio [ore]"
   AddNewWorld:
-    aliases: [or.addWorld]
     description: Allows OreRandomizer to be active for a specified world.
     permission-message: You do not have permission to use this command.
     usage: "Usage: /AddNewWorld <world>"
   GetAllowedWorlds:
-    aliases: [or.worlds]
-    description: Displays a list or individual world that OreRandomizer is active for.
+    description: Displays a list of worlds or a specified world that OreRandomizer is active for.
     permission-message: You do not have permission to use this command.
     usage: "Usage: /GetAllowedWorlds [world]"
   RemoveAllowedWorld:
-    aliases: [or.remWorld]
     description: Makes OreRandomizer inactive for a specified world.
     permission-message: You do not have permission to use this command.
     usage: "Usage: /RemoveAllowedWorld <world>"
 permissions:
   OreRandomizer.ToggleCreeperSound:
     description: Allows you to use the command ToggleCreeperSound.
+    default: true
+  OreRandomizer.GetRandomizationSound:
+    description: Allows you to use the command GetRandomizationSound.
+    default: true
+  OreRandomizer.SetRandomizationSound:
+    description: Allows you to use the command SetRandomizationSound.
     default: true
   OreRandomizer.SetOreRatio:
     description: Allows you to use the command SetOreRatio.
@@ -56,6 +66,8 @@ permissions:
     default: false
     children:
       OreRandomizer.ToggleCreeperSound: true
+      OreRandomizer.GetRandomizationSound: true
+      OreRandomizer.SetRandomizationSound: true
       OreRandomizer.SetOreRatio: true
       OreRandomizer.GetOreRatio: true
       OreRandomizer.AddNewWorld: true

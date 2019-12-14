@@ -10,20 +10,56 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80a6305a-4949-421e-aa32-2e5f6f374d87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vlatest/vlatest.iml" afterDir="false" />
+    <list default="true" id="80a6305a-4949-421e-aa32-2e5f6f374d87" name="Default Changelist" comment="Temporary 1.15 support">
+      <change afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetRandomizationSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetRandomizationSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vBees/target/classes/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/AddNewWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetAllowedWorlds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetRandomizationSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/OreListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/RemoveAllowedWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetOreRatio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetRandomizationSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/ToggleCreeperSound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/VersionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/src/main/resources/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/target/classes/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vPreBees/vPreBees.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/OreRandomizer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OreRandomizer_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VersionHandler/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandler/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OreRandomizer/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/OreRandomizer/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OreRandomizer/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/OreRandomizer/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OreRandomizer/target/classes/io/github/crusopaul/OreRandomizer/OreRandomizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/OreRandomizer/target/classes/io/github/crusopaul/OreRandomizer/OreRandomizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/OreRandomizer_parent_jar/OreRandomizer-parent.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vlatest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vlatest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/AddNewWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/AddNewWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/GetAllowedWorlds.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetAllowedWorlds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/GetOreRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetOreRatio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/OreListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/OreListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/RemoveAllowedWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/RemoveAllowedWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/SetOreRatio.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetOreRatio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/ToggleCreeperSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/ToggleCreeperSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/VersionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/VersionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vlatest/vlatest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vBees/vBees.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/OreRandomizer/target/" />
     <ignored path="$PROJECT_DIR$/VersionHandler/target/" />
     <ignored path="$PROJECT_DIR$/vlatest/target/" />
+    <ignored path="$PROJECT_DIR$/vPreBees/target/" />
+    <ignored path="$PROJECT_DIR$/vBees/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,51 +67,122 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vlatest/pom.xml">
+        <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="-255">
+              <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+        <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetOreRatio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="476">
+              <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetOreRatio.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+            <state relative-caret-position="-186">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/VersionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="77" column="61" lean-forward="true" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetRandomizationSound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="94" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/resources/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetRandomizationSound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetAllowedWorlds.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
+        <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/AddNewWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            <state relative-caret-position="256">
+              <caret line="106" column="87" lean-forward="true" selection-start-line="106" selection-start-column="87" selection-end-line="106" selection-end-column="87" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>config.yml.</find>
+      <find>config.yml.abk</find>
+      <find>or.sound</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,7 +190,30 @@
         <option value="$PROJECT_DIR$/vlatest/pom.xml" />
         <option value="$PROJECT_DIR$/VersionHandler/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/vBees/pom.xml" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vlatest/AddNewWorld.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/AddNewWorld.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/AddNewWorld.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetOreRatio.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetAllowedWorlds.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/RemoveAllowedWorld.java" />
+        <option value="$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetRandomizationSound.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/OreListener.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/OreListener.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetRandomizationSound.java" />
+        <option value="$PROJECT_DIR$/vPreBees/pom.xml" />
+        <option value="$PROJECT_DIR$/OreRandomizer/src/main/resources/config.yml" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/ToggleCreeperSound.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/ToggleCreeperSound.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/VersionHandler.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/VersionHandler.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetRandomizationSound.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetRandomizationSound.java" />
         <option value="$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java" />
+        <option value="$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetOreRatio.java" />
+        <option value="$PROJECT_DIR$/OreRandomizer/src/main/resources/plugin.yml" />
       </list>
     </option>
   </component>
@@ -107,6 +237,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,14 +283,90 @@
             </path>
             <path>
               <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vBees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vBees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vPreBees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vPreBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vPreBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vPreBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OreRandomizer" type="462c0819:PsiDirectoryNode" />
+              <item name="vPreBees" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vPreBees" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OreRandomizer-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,11 +375,20 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/Documents/minecraft_spigot_plugin_test/plugins/OreRandomizer" />
+    <property name="last_opened_file_path" value="D:/Documents/minecraft_spigot_plugin_test/plugins" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.github.crusopaul.vPreBees" />
+      <recent name="io.github.crusopaul.vBees" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\source\OreRandomizer" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -200,8 +417,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -209,14 +427,14 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Dependency Viewer" order="11" sideWeight="0.49840087" weight="0.3290461" />
@@ -230,6 +448,36 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Module Dependencies" order="8" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27027026" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290461" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" sideWeight="0.49840087" weight="0.3290461" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Module Dependencies" order="8" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/.name">
@@ -241,20 +489,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/OreRandomizer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vlatest/src/main/java/io/github/crusopaul/vlatest/VersionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VersionHandler/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -262,34 +496,245 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vlatest/vlatest.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vlatest/pom.xml">
+    <entry file="file://$PROJECT_DIR$/vPreBees/vPreBees.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="170">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+        <state relative-caret-position="408">
+          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetAllowedWorlds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/RemoveAllowedWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/main.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/AddNewWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        <state relative-caret-position="1054">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OreRandomizer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.15-R0.1-SNAPSHOT/spigot-api-1.15-R0.1-20191212.221558-8.jar!/org/bukkit/command/CommandExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/RemoveAllowedWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2363">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VersionHandler/src/main/java/io/github/crusopaul/VersionHandler/VersionInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/ToggleCreeperSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="73" lean-forward="true" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/OreListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="61" column="10" lean-forward="true" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetRandomizationSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/GetRandomizationSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="94" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/resources/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetRandomizationSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/VersionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="77" column="61" lean-forward="true" selection-start-line="77" selection-start-column="61" selection-end-line="77" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/java/io/github/crusopaul/OreRandomizer/OreRandomizer.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetRandomizationSound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="94" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vPreBees/src/main/java/io/github/crusopaul/vPreBees/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/SetOreRatio.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+          <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OreRandomizer/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/GetAllowedWorlds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vBees/src/main/java/io/github/crusopaul/vBees/AddNewWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="106" column="87" lean-forward="true" selection-start-line="106" selection-start-column="87" selection-end-line="106" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -345,7 +790,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>vlatest</last-edited>
+          <last-edited>vPreBees</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -369,7 +814,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.spigotmc:spigot-api:1.14.4-R0.1-SNAPSHOT</last-edited>
+          <last-edited>Maven: net.md-5:bungeecord-chat:1.13-SNAPSHOT</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

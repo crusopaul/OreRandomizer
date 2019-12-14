@@ -7,9 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="OreRandomizer" />
-        <module name="vlatest" />
+        <module name="vPreBees" />
+        <module name="vBees" />
         <module name="VersionHandler" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="vPreeBees" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

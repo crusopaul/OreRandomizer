@@ -7,9 +7,6 @@ RandomSpawnRatios:
   Iron: 4
   Lapis: 2
   Redstone: 8
-
-RandomizationSound:
-  PlayCreeperPrimingSound: true
-
+RandomizationSound: Ssss
 AllowedWorlds:
   - world
