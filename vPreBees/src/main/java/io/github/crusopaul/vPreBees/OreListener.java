@@ -127,7 +127,7 @@ public class OreListener implements Listener {
         String soundToSet = this.configFile.getString("RandomizationSound");
         SetOreRatio();
 
-        if (soundToSet.toUpperCase().equals("Ssss")) {
+        if (soundToSet.toUpperCase().equals("SSSS")) {
 
             soundToPlay = Sound.ENTITY_CREEPER_PRIMED;
 

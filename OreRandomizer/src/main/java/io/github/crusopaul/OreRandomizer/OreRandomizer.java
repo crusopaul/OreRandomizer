@@ -38,6 +38,7 @@ public class OreRandomizer extends JavaPlugin {
 
         }
         else if (
+            spigotAPIVersion.equals("1.15.1") ||
             spigotAPIVersion.equals("1.15")
         ) {
 
