@@ -9,6 +9,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFormEvent;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
@@ -153,7 +154,7 @@ public class OreListener implements Listener {
     }
 
     @EventHandler
-    public void onBlockFromToEvent (BlockFormEvent event) {
+    public void onBlockFormEvent(BlockFormEvent event) {
 
         Block involvedBlock = event.getBlock();
 

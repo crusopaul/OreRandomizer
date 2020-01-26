@@ -143,7 +143,7 @@ public class OreListener implements Listener {
     }
 
     @EventHandler
-    public void onBlockFromToEvent (BlockFormEvent event) {
+    public void onBlockFormEvent(BlockFormEvent event) {
 
         Block involvedBlock = event.getBlock();
 

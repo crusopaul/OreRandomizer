@@ -1,4 +1,3 @@
-name: V1_14_3
+name: vBees
 version: ${project.version}
-main: io.github.crusopaul.v1_14_3.V1_14_3
-api-version: 1.14.3
+main: io.github.crusopaul.vBees
