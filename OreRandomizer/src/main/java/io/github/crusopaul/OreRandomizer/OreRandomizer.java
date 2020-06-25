@@ -6,7 +6,6 @@ import io.github.crusopaul.VersionHandler.VersionInterface;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 public class OreRandomizer extends JavaPlugin {
 
@@ -38,6 +37,8 @@ public class OreRandomizer extends JavaPlugin {
 
         }
         else if (
+                spigotAPIVersion.equals("1.16.1") ||
+                spigotAPIVersion.equals("1.16") ||
                 spigotAPIVersion.equals("1.15.2") ||
                 spigotAPIVersion.equals("1.15.1") ||
                 spigotAPIVersion.equals("1.15")

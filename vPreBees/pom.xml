@@ -7,14 +7,16 @@
     <groupId>io.github.crusopaul</groupId>
     <artifactId>vPreBees</artifactId>
     <version>latest</version>
+    <packaging>jar</packaging>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <target>1.8</target>
+                    <source>1.8</source>
                 </configuration>
             </plugin>
         </plugins>
@@ -32,16 +34,17 @@
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.14.4-R0.1-SNAPSHOT</version>
-            <type>jar</type>
-            <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
             <artifactId>VersionHandler</artifactId>
-            <version>parent</version>
+            <version>latest</version>
             <type>jar</type>
-            <optional>true</optional>
         </dependency>
     </dependencies>
-
+    <properties>
+        <maven.compiler.source>12</maven.compiler.source>
+        <maven.compiler.target>12</maven.compiler.target>
+    </properties>
 </project>

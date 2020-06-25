@@ -12,17 +12,28 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
+                <artifactId>maven-shade-plugin</artifactId>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <target>1.8</target>
+                    <source>1.8</source>
                 </configuration>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
 
     <modules>
         <module>VersionHandler</module>
+        <module>vBees</module>
+        <module>vPreBees</module>
         <module>OreRandomizer</module>
     </modules>
 
@@ -36,38 +47,27 @@
     <dependencies>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
-            <artifactId>OreRandomizer</artifactId>
-            <version>1.1-SNAPSHOT</version>
-            <type>jar</type>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>io.github.crusopaul</groupId>
             <artifactId>vBees</artifactId>
             <version>latest</version>
             <type>jar</type>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
             <artifactId>vPreBees</artifactId>
             <version>latest</version>
             <type>jar</type>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>io.github.crusopaul</groupId>
             <artifactId>VersionHandler</artifactId>
-            <version>parent</version>
+            <version>latest</version>
             <type>jar</type>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
-            <type>jar</type>
-            <optional>true</optional>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
