@@ -50,7 +50,10 @@ public class GetOreRatio implements CommandExecutor {
 
             }
             else {
-
+                sender.sendMessage(
+                        ChatColor.BLUE +
+                                "Andesite: " + this.config.getInt("RandomSpawnRatios.Andesite")
+                );
                 sender.sendMessage(
                         ChatColor.BLUE +
                                 "Cobblestone: " + this.config.getInt("RandomSpawnRatios.Cobblestone")
@@ -65,11 +68,19 @@ public class GetOreRatio implements CommandExecutor {
                 );
                 sender.sendMessage(
                         ChatColor.BLUE +
+                                "Diorite: " + this.config.getInt("RandomSpawnRatios.Diorite")
+                );
+                sender.sendMessage(
+                        ChatColor.BLUE +
                                 "Emerald: " + this.config.getInt("RandomSpawnRatios.Emerald")
                 );
                 sender.sendMessage(
                         ChatColor.BLUE +
                                 "Gold: " + this.config.getInt("RandomSpawnRatios.Gold")
+                );
+                sender.sendMessage(
+                        ChatColor.BLUE +
+                                "Granite: " + this.config.getInt("RandomSpawnRatios.Granite")
                 );
                 sender.sendMessage(
                         ChatColor.BLUE +
@@ -104,11 +115,14 @@ public class GetOreRatio implements CommandExecutor {
         if (args.length > 0) {
             String normalizedOreSpecifier = args[0].toLowerCase();
             validOreReference = (
-                    normalizedOreSpecifier.equals("cobblestone") ||
+                    normalizedOreSpecifier.equals("andesite") ||
+                            normalizedOreSpecifier.equals("cobblestone") ||
                             normalizedOreSpecifier.equals("coal") ||
                             normalizedOreSpecifier.equals("diamond") ||
+                            normalizedOreSpecifier.equals("diorite") ||
                             normalizedOreSpecifier.equals("emerald") ||
                             normalizedOreSpecifier.equals("gold") ||
+                            normalizedOreSpecifier.equals("granite") ||
                             normalizedOreSpecifier.equals("iron") ||
                             normalizedOreSpecifier.equals("lapis") ||
                             normalizedOreSpecifier.equals("redstone")
@@ -119,7 +133,7 @@ public class GetOreRatio implements CommandExecutor {
 
             sender.sendMessage(ChatColor.RED + "\"" + args[0] + "\" is not a valid ore specifier.");
             sender.sendMessage(ChatColor.RED + "Valid ore specifiers are:");
-            sender.sendMessage(ChatColor.RED + "Cobblestone, Coal, Diamond, Emerald, Gold, Iron, Lapis, or Redstone");
+            sender.sendMessage(ChatColor.RED + "Andesite, Cobblestone, Coal, Diamond, Diorite, Emerald, Gold, Granite, Iron, Lapis, or Redstone");
 
         }
 

@@ -88,20 +88,26 @@ public class OreListener implements Listener {
 
     public void SetOreRatio() {
 
-        this.ratioPrecomputation[0] = this.configFile.getInt("RandomSpawnRatios.Cobblestone");
+        this.ratioPrecomputation[0] = this.configFile.getInt("RandomSpawnRatios.Andesite");
         this.ratioPrecomputation[1] = this.ratioPrecomputation[0] +
-                this.configFile.getInt("RandomSpawnRatios.Coal");
+                this.configFile.getInt("RandomSpawnRatios.Cobblestone");
         this.ratioPrecomputation[2] = this.ratioPrecomputation[1] +
-                this.configFile.getInt("RandomSpawnRatios.Diamond");
+                this.configFile.getInt("RandomSpawnRatios.Coal");
         this.ratioPrecomputation[3] = this.ratioPrecomputation[2] +
-                this.configFile.getInt("RandomSpawnRatios.Emerald");
+                this.configFile.getInt("RandomSpawnRatios.Diamond");
         this.ratioPrecomputation[4] = this.ratioPrecomputation[3] +
-                this.configFile.getInt("RandomSpawnRatios.Gold");
+                this.configFile.getInt("RandomSpawnRatios.Diorite");
         this.ratioPrecomputation[5] = this.ratioPrecomputation[4] +
-                this.configFile.getInt("RandomSpawnRatios.Iron");
+                this.configFile.getInt("RandomSpawnRatios.Emerald");
         this.ratioPrecomputation[6] = this.ratioPrecomputation[5] +
-                this.configFile.getInt("RandomSpawnRatios.Lapis");
+                this.configFile.getInt("RandomSpawnRatios.Gold");
         this.ratioPrecomputation[7] = this.ratioPrecomputation[6] +
+                this.configFile.getInt("RandomSpawnRatios.Granite");
+        this.ratioPrecomputation[8] = this.ratioPrecomputation[7] +
+                this.configFile.getInt("RandomSpawnRatios.Iron");
+        this.ratioPrecomputation[9] = this.ratioPrecomputation[8] +
+                this.configFile.getInt("RandomSpawnRatios.Lapis");
+        this.ratioPrecomputation[10] = this.ratioPrecomputation[9] +
                 this.configFile.getInt("RandomSpawnRatios.Redstone");
 
     }
@@ -129,7 +135,7 @@ public class OreListener implements Listener {
         this.configFile = configFileToSet;
         this.config = configToSet;
         this.rng = new Random();
-        this.ratioPrecomputation = new int [8];
+        this.ratioPrecomputation = new int [11];
         String soundToSet = this.configFile.getString("RandomizationSound");
         SetOreRatio();
 
@@ -209,23 +215,29 @@ public class OreListener implements Listener {
     public Material getRandomOre() {
 
         Material materialToReturn;
-        int randomNumber = getRng().nextInt(ratioPrecomputation[7]);
+        int randomNumber = getRng().nextInt(ratioPrecomputation[10]);
 
         if (randomNumber < ratioPrecomputation[0])
-            materialToReturn = Material.COBBLESTONE;
+            materialToReturn = Material.ANDESITE;
         else if (randomNumber < ratioPrecomputation[1])
-            materialToReturn = Material.COAL_ORE;
+            materialToReturn = Material.COBBLESTONE;
         else if (randomNumber < ratioPrecomputation[2])
-            materialToReturn = Material.DIAMOND_ORE;
+            materialToReturn = Material.COAL_ORE;
         else if (randomNumber < ratioPrecomputation[3])
-            materialToReturn = Material.EMERALD_ORE;
+            materialToReturn = Material.DIAMOND_ORE;
         else if (randomNumber < ratioPrecomputation[4])
-            materialToReturn = Material.GOLD_ORE;
+            materialToReturn = Material.DIORITE;
         else if (randomNumber < ratioPrecomputation[5])
-            materialToReturn = Material.IRON_ORE;
+            materialToReturn = Material.EMERALD_ORE;
         else if (randomNumber < ratioPrecomputation[6])
-            materialToReturn = Material.LAPIS_ORE;
+            materialToReturn = Material.GOLD_ORE;
         else if (randomNumber < ratioPrecomputation[7])
+            materialToReturn = Material.GRANITE;
+        else if (randomNumber < ratioPrecomputation[8])
+            materialToReturn = Material.IRON_ORE;
+        else if (randomNumber < ratioPrecomputation[9])
+            materialToReturn = Material.LAPIS_ORE;
+        else if (randomNumber < ratioPrecomputation[10])
             materialToReturn = Material.REDSTONE_ORE;
         else
             materialToReturn = Material.COBBLESTONE;
