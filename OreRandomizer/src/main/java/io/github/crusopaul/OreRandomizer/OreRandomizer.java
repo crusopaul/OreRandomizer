@@ -25,12 +25,7 @@ public class OreRandomizer extends JavaPlugin {
             spigotAPIVersion.equals("1.14") ||
             spigotAPIVersion.equals("1.13.2") ||
             spigotAPIVersion.equals("1.13.1") ||
-            spigotAPIVersion.equals("1.13") ||
-            spigotAPIVersion.equals("1.12.2") ||
-            spigotAPIVersion.equals("1.12.1") ||
-            spigotAPIVersion.equals("1.12") ||
-            spigotAPIVersion.equals("1.11.2") ||
-            spigotAPIVersion.equals("1.11")
+            spigotAPIVersion.equals("1.13")
         ) {
 
             spigotAPIVersion = "vPreBees";
