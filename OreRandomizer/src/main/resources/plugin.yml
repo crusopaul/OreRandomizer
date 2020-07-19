@@ -1,7 +1,6 @@
 name: OreRandomizer
-version: "1.1"
+version: "1.2.1"
 main: io.github.crusopaul.OreRandomizer.OreRandomizer
-api-version: "1.15"
 commands:
   ToggleCreeperSound:
     description: (Deprecated) Toggles the sound that plays when ore is randomly generated.
