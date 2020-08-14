@@ -17,7 +17,7 @@ public class OreRandomizer extends JavaPlugin {
         String spigotAPIVersion = Bukkit.getVersion();
         spigotAPIVersion = spigotAPIVersion.substring(spigotAPIVersion.indexOf("1."), spigotAPIVersion.indexOf(')'));
 
-        if (
+        /*if (
             spigotAPIVersion.equals("1.14.4") ||
             spigotAPIVersion.equals("1.14.3") ||
             spigotAPIVersion.equals("1.14.2") ||
@@ -31,12 +31,13 @@ public class OreRandomizer extends JavaPlugin {
             spigotAPIVersion = "vPreBees";
 
         }
-        else if (
+        else*/ if (
+                spigotAPIVersion.equals("1.16.2") ||
                 spigotAPIVersion.equals("1.16.1") ||
-                spigotAPIVersion.equals("1.16") ||
+                spigotAPIVersion.equals("1.16") /*||
                 spigotAPIVersion.equals("1.15.2") ||
                 spigotAPIVersion.equals("1.15.1") ||
-                spigotAPIVersion.equals("1.15")
+                spigotAPIVersion.equals("1.15")*/
         ) {
 
             spigotAPIVersion = "vBees";
