@@ -1,9 +1,12 @@
 RandomSpawnRatios:
+  Andesite: 5
   Cobblestone: 20
   Coal: 5
   Diamond: 1
+  Diorite: 3
   Emerald: 1
   Gold: 3
+  Granite: 3
   Iron: 4
   Lapis: 2
   Redstone: 8

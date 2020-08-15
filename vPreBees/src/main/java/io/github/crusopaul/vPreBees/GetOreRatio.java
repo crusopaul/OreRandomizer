@@ -9,122 +9,105 @@ import org.bukkit.entity.Player;
 
 public class GetOreRatio implements CommandExecutor {
 
-    private FileConfiguration config;
+  private FileConfiguration config;
 
-    GetOreRatio(OreListener oreListenerToSet) {
+  GetOreRatio(OreListener oreListenerToSet) {
 
-        this.config = oreListenerToSet.getConfigFile();
+    this.config = oreListenerToSet.getConfigFile();
+  }
 
+  @Override
+  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+    if (sender.hasPermission("OreRandomizer.SetOreRatio") || !(sender instanceof Player)) {
+
+      if (!validityCheckAndErrorMessage(sender, args)) {
+
+        return false;
+      }
+
+      if (args.length > 0) {
+
+        String oreSpecifier =
+            args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
+
+        if (this.config.getString("RandomSpawnRatios." + oreSpecifier) != null) {
+
+          sender.sendMessage(
+              ChatColor.BLUE
+                  + oreSpecifier
+                  + ": "
+                  + this.config.getInt("RandomSpawnRatios." + oreSpecifier));
+
+        } else {
+
+          sender.sendMessage(ChatColor.RED + "The following configuration is missing:");
+          sender.sendMessage(ChatColor.RED + "RandomSpawnRatios." + oreSpecifier);
+        }
+
+      } else {
+        sender.sendMessage(
+            ChatColor.BLUE + "Andesite: " + this.config.getInt("RandomSpawnRatios.Andesite"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Cobblestone: " + this.config.getInt("RandomSpawnRatios.Cobblestone"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Coal: " + this.config.getInt("RandomSpawnRatios.Coal"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Diamond: " + this.config.getInt("RandomSpawnRatios.Diamond"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Diorite: " + this.config.getInt("RandomSpawnRatios.Diorite"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Emerald: " + this.config.getInt("RandomSpawnRatios.Emerald"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Gold: " + this.config.getInt("RandomSpawnRatios.Gold"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Granite: " + this.config.getInt("RandomSpawnRatios.Granite"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Iron: " + this.config.getInt("RandomSpawnRatios.Iron"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Lapis: " + this.config.getInt("RandomSpawnRatios.Lapis"));
+        sender.sendMessage(
+            ChatColor.BLUE + "Redstone: " + this.config.getInt("RandomSpawnRatios.Redstone"));
+      }
+
+    } else {
+
+      sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
     }
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    return true;
+  }
 
-        if (sender.hasPermission("OreRandomizer.SetOreRatio") || !(sender instanceof Player)) {
+  public boolean validityCheckAndErrorMessage(CommandSender sender, String[] args) {
 
-            if (!validityCheckAndErrorMessage(sender, args)) {
+    boolean validOreReference = true;
 
-                return false;
-
-            }
-
-            if (args.length > 0) {
-
-                String oreSpecifier = args[0].substring(0, 1).toUpperCase() +
-                        args[0].substring(1).toLowerCase();
-
-                if (this.config.getString("RandomSpawnRatios." + oreSpecifier) != null) {
-
-                    sender.sendMessage(
-                            ChatColor.BLUE +
-                                    oreSpecifier + ": " +
-                                    this.config.getInt("RandomSpawnRatios." + oreSpecifier)
-                    );
-
-                } else {
-
-                    sender.sendMessage(ChatColor.RED + "The following configuration is missing:");
-                    sender.sendMessage(ChatColor.RED + "RandomSpawnRatios." + oreSpecifier);
-
-                }
-
-            }
-            else {
-
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Cobblestone: " + this.config.getInt("RandomSpawnRatios.Cobblestone")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Coal: " + this.config.getInt("RandomSpawnRatios.Coal")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Diamond: " + this.config.getInt("RandomSpawnRatios.Diamond")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Emerald: " + this.config.getInt("RandomSpawnRatios.Emerald")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Gold: " + this.config.getInt("RandomSpawnRatios.Gold")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Iron: " + this.config.getInt("RandomSpawnRatios.Iron")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Lapis: " + this.config.getInt("RandomSpawnRatios.Lapis")
-                );
-                sender.sendMessage(
-                        ChatColor.BLUE +
-                                "Redstone: " + this.config.getInt("RandomSpawnRatios.Redstone")
-                );
-
-            }
-
-        }
-        else {
-
-            sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
-
-        }
-
-        return true;
-
+    if (args.length > 0) {
+      String normalizedOreSpecifier = args[0].toLowerCase();
+      validOreReference =
+          (normalizedOreSpecifier.equals("andesite")
+              || normalizedOreSpecifier.equals("cobblestone")
+              || normalizedOreSpecifier.equals("coal")
+              || normalizedOreSpecifier.equals("diamond")
+              || normalizedOreSpecifier.equals("diorite")
+              || normalizedOreSpecifier.equals("emerald")
+              || normalizedOreSpecifier.equals("gold")
+              || normalizedOreSpecifier.equals("granite")
+              || normalizedOreSpecifier.equals("iron")
+              || normalizedOreSpecifier.equals("lapis")
+              || normalizedOreSpecifier.equals("redstone"));
     }
 
-    public boolean validityCheckAndErrorMessage(CommandSender sender, String[] args) {
+    if (!validOreReference) {
 
-        boolean validOreReference = true;
-
-        if (args.length > 0) {
-            String normalizedOreSpecifier = args[0].toLowerCase();
-            validOreReference = (
-                    normalizedOreSpecifier.equals("cobblestone") ||
-                            normalizedOreSpecifier.equals("coal") ||
-                            normalizedOreSpecifier.equals("diamond") ||
-                            normalizedOreSpecifier.equals("emerald") ||
-                            normalizedOreSpecifier.equals("gold") ||
-                            normalizedOreSpecifier.equals("iron") ||
-                            normalizedOreSpecifier.equals("lapis") ||
-                            normalizedOreSpecifier.equals("redstone")
-            );
-        }
-
-        if (!validOreReference) {
-
-            sender.sendMessage(ChatColor.RED + "\"" + args[0] + "\" is not a valid ore specifier.");
-            sender.sendMessage(ChatColor.RED + "Valid ore specifiers are:");
-            sender.sendMessage(ChatColor.RED + "Cobblestone, Coal, Diamond, Emerald, Gold, Iron, Lapis, or Redstone");
-
-        }
-
-        return (validOreReference);
-
+      sender.sendMessage(ChatColor.RED + "\"" + args[0] + "\" is not a valid ore specifier.");
+      sender.sendMessage(ChatColor.RED + "Valid ore specifiers are:");
+      sender.sendMessage(
+          ChatColor.RED
+              + "Andesite, Cobblestone, Coal, Diamond, Diorite, Emerald, Gold, Granite, Iron,"
+              + " Lapis, or Redstone");
     }
 
+    return (validOreReference);
+  }
 }
