@@ -8,25 +8,21 @@ import org.bukkit.entity.Player;
 
 public class ToggleCreeperSound implements CommandExecutor {
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+  @Override
+  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        if (sender.hasPermission("OreRandomizer.ToggleCreeperSound") || !(sender instanceof Player)) {
+    if (sender.hasPermission("OreRandomizer.ToggleCreeperSound") || !(sender instanceof Player)) {
 
-            sender.sendMessage(
-                    ChatColor.RED +
-                            "This command has been deprecated, use /GetRandomizationSound or /SetRandomizationSound."
-            );
+      sender.sendMessage(
+          ChatColor.RED
+              + "This command has been deprecated, use /GetRandomizationSound or"
+              + " /SetRandomizationSound.");
 
-        }
-        else {
+    } else {
 
-            sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
-
-        }
-
-        return true;
-
+      sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
     }
 
+    return true;
+  }
 }

@@ -8,52 +8,45 @@ import org.bukkit.entity.Player;
 
 public class GetRandomizationSound implements CommandExecutor {
 
-    private OreListener oreListener;
+  private OreListener oreListener;
 
-    GetRandomizationSound(OreListener oreListenerToSet) {
+  GetRandomizationSound(OreListener oreListenerToSet) {
 
-        this.oreListener = oreListenerToSet;
+    this.oreListener = oreListenerToSet;
+  }
 
+  @Override
+  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+    if (sender.hasPermission("OreRandomizer.GetRandomizationSound")
+        || !(sender instanceof Player)) {
+
+      if (!validityCheckAndErrorMessage(sender, args)) {
+
+        return false;
+      }
+
+      this.oreListener.GetRandomizationSound(sender);
+
+    } else {
+
+      sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
     }
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    return true;
+  }
 
-        if (sender.hasPermission("OreRandomizer.GetRandomizationSound") || !(sender instanceof Player)) {
+  public boolean validityCheckAndErrorMessage(CommandSender sender, String[] args) {
 
-            if (!validityCheckAndErrorMessage(sender, args)) {
+    boolean validNumberOfArgs;
 
-                return false;
+    validNumberOfArgs = args.length == 0;
 
-            }
+    if (!validNumberOfArgs) {
 
-            this.oreListener.GetRandomizationSound(sender);
-
-        }
-        else {
-
-            sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
-
-        }
-
-        return true;
-
+      sender.sendMessage(ChatColor.RED + "/GetRandomizationSound takes no arguments.");
     }
 
-    public boolean validityCheckAndErrorMessage(CommandSender sender, String[] args) {
-
-        boolean validNumberOfArgs;
-
-        validNumberOfArgs = args.length == 0;
-
-        if (!validNumberOfArgs) {
-
-            sender.sendMessage(ChatColor.RED + "/GetRandomizationSound takes no arguments.");
-
-        }
-
-        return validNumberOfArgs;
-
-    }
-
+    return validNumberOfArgs;
+  }
 }
