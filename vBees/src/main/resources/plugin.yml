@@ -1,3 +1,0 @@
-name: vBees
-version: ${project.version}
-main: io.github.crusopaul.vBees
