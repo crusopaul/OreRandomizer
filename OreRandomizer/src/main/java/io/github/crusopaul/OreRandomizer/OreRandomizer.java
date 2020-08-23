@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class OreRandomizer extends JavaPlugin {
 
   private VersionInterface versionHandler;
+  private OreListener oreListener;
 
   @Override
   public void onEnable() {
@@ -57,38 +58,23 @@ public class OreRandomizer extends JavaPlugin {
     this.saveDefaultConfig();
 
     try {
+      this.versionHandler.randomizedMaterialList.populateRatios(this.getConfig());
+      this.versionHandler.randomizedMaterialList.populateThresholds();
 
-      switch (validateConfig(spigotAPIVersion)) {
-        case -2:
-          throw new NullPointerException(
-              "The config key \"RandomizationSound\" is missing or does not match a known sound.");
-        case -1:
-          throw new NullPointerException(
-              "One or more of the config keys is missing or cannot be cast as the expected type.");
-        case 0:
-          throw new NullPointerException(
-              "One or more of the ratios is negative and preventing OreRandomizer from loading.");
-        default:
-          break;
-      }
-
-      this.versionHandler.instantiate(
-          this.getConfig(), new File(this.getDataFolder(), "config.yml"));
-      this.getCommand("GetOreRatio").setExecutor(this.versionHandler.getGetOreRatio());
-      this.getCommand("SetOreRatio").setExecutor(this.versionHandler.getSetOreRatio());
-      this.getCommand("AddNewWorld").setExecutor(this.versionHandler.getAddNewWorld());
-      this.getCommand("GetAllowedWorlds").setExecutor(this.versionHandler.getGetAllowedWorlds());
-      this.getCommand("RemoveAllowedWorld")
-          .setExecutor(this.versionHandler.getRemoveAllowedWorld());
-      this.getCommand("ToggleCreeperSound")
-          .setExecutor(this.versionHandler.getToggleCreeperSound());
-      this.getCommand("GetRandomizationSound")
-          .setExecutor(this.versionHandler.getGetRandomizationSound());
-      this.getCommand("SetRandomizationSound")
-          .setExecutor(this.versionHandler.getSetRandomizationSound());
-      this.getServer()
-          .getPluginManager()
-          .registerEvents(this.versionHandler.getOreListener(), this);
+      this.oreListener =
+          new OreListener(
+              this.getConfig(),
+              new File(this.getDataFolder(), "config.yml"),
+              this.versionHandler.randomizedMaterialList);
+      this.getCommand("GetOreRatio").setExecutor(this.getGetOreRatio());
+      this.getCommand("SetOreRatio").setExecutor(this.getSetOreRatio());
+      this.getCommand("AddNewWorld").setExecutor(this.getAddNewWorld());
+      this.getCommand("GetAllowedWorlds").setExecutor(this.getGetAllowedWorlds());
+      this.getCommand("RemoveAllowedWorld").setExecutor(this.getRemoveAllowedWorld());
+      this.getCommand("ToggleCreeperSound").setExecutor(this.getToggleCreeperSound());
+      this.getCommand("GetRandomizationSound").setExecutor(this.getGetRandomizationSound());
+      this.getCommand("SetRandomizationSound").setExecutor(this.getSetRandomizationSound());
+      this.getServer().getPluginManager().registerEvents(this.getOreListener(), this);
       this.getLogger().info("OreRandomizer enabled.");
 
     } catch (final Exception e) {
@@ -105,7 +91,7 @@ public class OreRandomizer extends JavaPlugin {
     this.getLogger().info("OreRandomizer disabled.");
   }
 
-  public int validateConfig(String spigotAPIVersion) {
+  private int validateConfig(String spigotAPIVersion) {
 
     int[] ratios = new int[8];
     boolean playCreeperSound;

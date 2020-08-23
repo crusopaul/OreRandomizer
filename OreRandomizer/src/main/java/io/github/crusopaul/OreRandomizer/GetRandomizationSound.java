@@ -1,4 +1,4 @@
-package io.github.crusopaul.vPreBees;
+package io.github.crusopaul.OreRandomizer;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

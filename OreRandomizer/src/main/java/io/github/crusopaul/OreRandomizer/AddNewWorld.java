@@ -1,4 +1,4 @@
-package io.github.crusopaul.vBees;
+package io.github.crusopaul.OreRandomizer;
 
 import java.util.List;
 import org.bukkit.Bukkit;
