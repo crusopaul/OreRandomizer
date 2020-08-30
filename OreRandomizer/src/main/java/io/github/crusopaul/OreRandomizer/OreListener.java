@@ -47,8 +47,8 @@ public class OreListener implements Listener {
   private int[] ratioPrecomputation;
   private Sound soundToPlay;
   private List<String> AllowedWorlds;
-  
-	public RandomizedMaterialList materialList;
+
+  public RandomizedMaterialList materialList;
 
   public FileConfiguration getConfigFile() {
 
@@ -140,7 +140,7 @@ public class OreListener implements Listener {
     switch (newBlockType) {
       case COBBLESTONE:
         event.setCancelled(true);
-        involvedBlock.setType(this.materialList.getRandomeOre());
+        involvedBlock.setType(this.materialList.getRandomOre());
         involvedBlock
             .getWorld()
             .playSound(involvedBlock.getLocation(), this.soundToPlay, 1, (float) 1);

@@ -1,5 +1,6 @@
 package io.github.crusopaul.OreRandomizer;
 
+import io.github.crusopaul.VersionHandler.RandomizedMaterialList;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -22,21 +23,25 @@ public class GetOreRatio implements CommandExecutor {
     if (sender.hasPermission("OreRandomizer.SetOreRatio") || !(sender instanceof Player)) {
       if (args.length > 0) {
         final String oreNode = validityCheckAndErrorMessage(sender, args);
-        final String oreSpecified =
-            args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
 
         if (oreNode.isEmpty()) {
           return false;
         }
 
+        final String oreSpecifier =
+            args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
+
         sender.sendMessage(ChatColor.BLUE + oreSpecifier + ": " + this.config.getInt(oreNode));
       } else {
-        for (RandomizedMaterial m : this.materialList) {
-          sender.sendMessage(ChatColor.BLUE + m.getName() + ": " + this.config.getInt(m.getNode()));
+        for (int i = 0; i < this.materialList.list.length; i++) {
+          sender.sendMessage(
+              ChatColor.BLUE
+                  + this.materialList.list[i].getName()
+                  + ": "
+                  + this.config.getInt(this.materialList.list[i].getNode()));
         }
       }
     } else {
-
       sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
     }
 
@@ -49,9 +54,9 @@ public class GetOreRatio implements CommandExecutor {
     if (args.length > 0) {
       final String normalizedOreSpecifier = args[0].toLowerCase();
 
-      for (RandomizedMaterial m : this.materialList) {
-        if (normalizedOreSpecifier.equals(m.getNormalName())) {
-          validOreReference = m.getNode();
+      for (int i = 0; i < this.materialList.list.length; i++) {
+        if (normalizedOreSpecifier.equals(this.materialList.list[i].getNormalName())) {
+          validOreReference = this.materialList.list[i].getNode();
           break;
         }
       }

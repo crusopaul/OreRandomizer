@@ -91,11 +91,17 @@ public class RandomizedMaterialList {
         materialToReturn = this.list[0].getMaterial();
         break;
       default:
-        int randomNumber = this.rng.nextInt(this.list[this.list.length - 1].getThreshold());
-        for (int i = 1; i < this.list.length; i++) {
-          if (randomNumber > this.list[i - 1].getThreshold()) {
-            materialToReturn = this.list[i].getMaterial();
-            break;
+        if (this.list[this.list.length - 1].getThreshold() != 0) {
+          int randomNumber = this.rng.nextInt(this.list[this.list.length - 1].getThreshold());
+          if (randomNumber < this.list[0].getThreshold()) {
+            materialToReturn = this.list[0].getMaterial();
+          } else {
+            for (int i = 1; i < this.list.length; i++) {
+              if (randomNumber >= this.list[i - 1].getThreshold()) {
+                materialToReturn = this.list[i].getMaterial();
+                break;
+              }
+            }
           }
         }
         break;

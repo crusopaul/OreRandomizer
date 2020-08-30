@@ -66,15 +66,17 @@ public class OreRandomizer extends JavaPlugin {
               this.getConfig(),
               new File(this.getDataFolder(), "config.yml"),
               this.versionHandler.randomizedMaterialList);
-      this.getCommand("GetOreRatio").setExecutor(this.getGetOreRatio());
-      this.getCommand("SetOreRatio").setExecutor(this.getSetOreRatio());
-      this.getCommand("AddNewWorld").setExecutor(this.getAddNewWorld());
-      this.getCommand("GetAllowedWorlds").setExecutor(this.getGetAllowedWorlds());
-      this.getCommand("RemoveAllowedWorld").setExecutor(this.getRemoveAllowedWorld());
-      this.getCommand("ToggleCreeperSound").setExecutor(this.getToggleCreeperSound());
-      this.getCommand("GetRandomizationSound").setExecutor(this.getGetRandomizationSound());
-      this.getCommand("SetRandomizationSound").setExecutor(this.getSetRandomizationSound());
-      this.getServer().getPluginManager().registerEvents(this.getOreListener(), this);
+      this.getCommand("GetOreRatio").setExecutor(new GetOreRatio(this.oreListener));
+      this.getCommand("SetOreRatio").setExecutor(new SetOreRatio(this.oreListener));
+      this.getCommand("AddNewWorld").setExecutor(new AddNewWorld(this.oreListener));
+      this.getCommand("GetAllowedWorlds").setExecutor(new GetAllowedWorlds(this.oreListener));
+      this.getCommand("RemoveAllowedWorld").setExecutor(new RemoveAllowedWorld(this.oreListener));
+      this.getCommand("ToggleCreeperSound").setExecutor(new ToggleCreeperSound());
+      this.getCommand("GetRandomizationSound")
+          .setExecutor(new GetRandomizationSound(this.oreListener));
+      this.getCommand("SetRandomizationSound")
+          .setExecutor(new SetRandomizationSound(this.oreListener));
+      this.getServer().getPluginManager().registerEvents(this.oreListener, this);
       this.getLogger().info("OreRandomizer enabled.");
 
     } catch (final Exception e) {
