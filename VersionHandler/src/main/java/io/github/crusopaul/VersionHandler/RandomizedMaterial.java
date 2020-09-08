@@ -3,11 +3,12 @@ package io.github.crusopaul.VersionHandler;
 import org.bukkit.Material;
 
 public class RandomizedMaterial {
-
   public RandomizedMaterial(Material rm, String mn, String fn) {
-    randomizedMaterial = rm;
-    materialNode = mn;
-    friendlyName = fn;
+    this.randomizedMaterial = rm;
+    this.materialNode = mn;
+    this.friendlyName = fn;
+    this.ratio = 0;
+    this.threshold = 0;
   }
 
   private Material randomizedMaterial;
@@ -17,27 +18,22 @@ public class RandomizedMaterial {
   private int threshold;
 
   public Material getMaterial() {
-
     return this.randomizedMaterial;
   }
 
   public String getNode() {
-
     return this.materialNode;
   }
 
   public String getName() {
-
     return this.friendlyName;
   }
 
   public String getNormalName() {
-
     return this.friendlyName.toLowerCase();
   }
 
   public int getRatio() {
-
     return this.ratio;
   }
 
@@ -46,7 +42,6 @@ public class RandomizedMaterial {
   }
 
   public int getThreshold() {
-
     return this.threshold;
   }
 

@@ -7,13 +7,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class OreRandomizer extends JavaPlugin {
-
   private VersionInterface versionHandler;
   private OreListener oreListener;
 
   @Override
   public void onEnable() {
-
     String spigotAPIVersion = Bukkit.getVersion();
     spigotAPIVersion =
         spigotAPIVersion.substring(spigotAPIVersion.indexOf("1."), spigotAPIVersion.indexOf(')'));
@@ -26,29 +24,22 @@ public class OreRandomizer extends JavaPlugin {
         || spigotAPIVersion.equals("1.13.2")
         || spigotAPIVersion.equals("1.13.1")
         || spigotAPIVersion.equals("1.13")) {
-
       spigotAPIVersion = "vPreBees";
-
     } else if (spigotAPIVersion.equals("1.16.2")
         || spigotAPIVersion.equals("1.16.1")
         || spigotAPIVersion.equals("1.16")
         || spigotAPIVersion.equals("1.15.2")
         || spigotAPIVersion.equals("1.15.1")
         || spigotAPIVersion.equals("1.15")) {
-
       spigotAPIVersion = "vBees";
     }
 
     try {
-
       final Class<?> versionHandlerInstance =
           Class.forName("io.github.crusopaul." + spigotAPIVersion + ".VersionHandler");
-
       this.versionHandler =
           (VersionInterface) versionHandlerInstance.getConstructor().newInstance();
-
     } catch (final Exception e) {
-
       this.getLogger().severe("This version is not yet supported");
       e.printStackTrace();
       this.setEnabled(false);
@@ -60,12 +51,13 @@ public class OreRandomizer extends JavaPlugin {
     try {
       this.versionHandler.randomizedMaterialList.populateRatios(this.getConfig());
       this.versionHandler.randomizedMaterialList.populateThresholds();
-
+      this.versionHandler.randomizationSoundList.setSound(this.getConfig());
       this.oreListener =
           new OreListener(
               this.getConfig(),
               new File(this.getDataFolder(), "config.yml"),
-              this.versionHandler.randomizedMaterialList);
+              this.versionHandler.randomizedMaterialList,
+              this.versionHandler.randomizationSoundList);
       this.getCommand("GetOreRatio").setExecutor(new GetOreRatio(this.oreListener));
       this.getCommand("SetOreRatio").setExecutor(new SetOreRatio(this.oreListener));
       this.getCommand("AddNewWorld").setExecutor(new AddNewWorld(this.oreListener));
@@ -78,9 +70,7 @@ public class OreRandomizer extends JavaPlugin {
           .setExecutor(new SetRandomizationSound(this.oreListener));
       this.getServer().getPluginManager().registerEvents(this.oreListener, this);
       this.getLogger().info("OreRandomizer enabled.");
-
     } catch (final Exception e) {
-
       this.getLogger().severe("Could not instantiate commands or configuration file is invalid.");
       e.printStackTrace();
       this.setEnabled(false);
@@ -89,12 +79,10 @@ public class OreRandomizer extends JavaPlugin {
 
   @Override
   public void onDisable() {
-
     this.getLogger().info("OreRandomizer disabled.");
   }
 
   private int validateConfig(String spigotAPIVersion) {
-
     int[] ratios = new int[8];
     boolean playCreeperSound;
     String soundToPlay;
@@ -102,31 +90,21 @@ public class OreRandomizer extends JavaPlugin {
     playCreeperSound = this.getConfig().getBoolean("RandomizationSound.PlayCreeperPrimingSound");
 
     if (spigotAPIVersion.equals("vPreBees")) {
-
       if (!this.getConfig().isSet("RandomizationSound.PlayCreeperPrimingSound")) {
-
         soundToPlay = this.getConfig().getString("RandomizationSound");
 
         if (soundToPlay == null) {
-
           return -2;
-
         } else if (!soundToPlay.toUpperCase().equals("SSSS")
             && !soundToPlay.toUpperCase().equals("NORMAL")) {
-
           return -2;
         }
-
       } else if (playCreeperSound) {
-
         this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
 
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
         }
 
@@ -134,102 +112,78 @@ public class OreRandomizer extends JavaPlugin {
         this.getConfig().set("RandomizationSound", "Ssss");
 
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not save to config file.");
         }
 
       } else {
-
         this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
         }
+
         this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
         this.getConfig().set("RandomizationSound", "normal");
+
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not save to config file.");
         }
       }
-
     } else if (spigotAPIVersion.equals("vBees")) {
-
       if (!this.getConfig().isSet("RandomizationSound.PlayCreeperPrimingSound")) {
-
         soundToPlay = this.getConfig().getString("RandomizationSound");
 
         if (soundToPlay == null) {
-
           return -2;
-
         } else if (!soundToPlay.toUpperCase().equals("BUZZ")
             && !soundToPlay.toUpperCase().equals("SSSS")
             && !soundToPlay.toUpperCase().equals("NORMAL")) {
-
           return -2;
         }
-
       } else if (playCreeperSound) {
-
         this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
         }
+
         this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
         this.getConfig().set("RandomizationSound", "Ssss");
+
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not save to config file.");
         }
-
       } else {
-
         this.getLogger().warning("Old config.yml detected, backing up and updating accordingly.");
+
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml.bak"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not backup config file, attempting to overwrite.");
         }
+
         this.getConfig().set("RandomizationSound.PlayCreeperPrimingSound", null);
         this.getConfig().set("RandomizationSound", "normal");
+
         try {
-
           this.getConfig().save(new File(this.getDataFolder(), "config.yml"));
-
         } catch (IOException e) {
-
           Bukkit.getLogger().info("Could not save to config file.");
         }
       }
     }
 
     try {
-
       ratios[0] = this.getConfig().getInt("RandomSpawnRatios.Cobblestone");
       ratios[1] = this.getConfig().getInt("RandomSpawnRatios.Coal");
       ratios[2] = this.getConfig().getInt("RandomSpawnRatios.Diamond");
@@ -247,16 +201,11 @@ public class OreRandomizer extends JavaPlugin {
           && ratios[5] > -1
           && ratios[6] > -1
           && ratios[7] > -1) {
-
         return 1;
-
       } else {
-
         return 0;
       }
-
     } catch (NullPointerException e) {
-
       return -1;
     }
   }

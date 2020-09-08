@@ -1,9 +1,12 @@
 package io.github.crusopaul.vPreBees;
 
+import io.github.crusopaul.VersionHandler.RandomizationSound;
+import io.github.crusopaul.VersionHandler.RandomizationSoundList;
 import io.github.crusopaul.VersionHandler.RandomizedMaterial;
 import io.github.crusopaul.VersionHandler.RandomizedMaterialList;
 import io.github.crusopaul.VersionHandler.VersionInterface;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 
 public class VersionHandler extends VersionInterface {
   public VersionHandler() {
@@ -23,6 +26,13 @@ public class VersionHandler extends VersionInterface {
               new RandomizedMaterial(Material.LAPIS_ORE, "RandomSpawnRatios.Lapis", "Lapis"),
               new RandomizedMaterial(
                   Material.REDSTONE_ORE, "RandomSpawnRatios.Redstone", "Redstone")
+            });
+
+    this.randomizationSoundList =
+        new RandomizationSoundList(
+            new RandomizationSound[] {
+              new RandomizationSound(Sound.BLOCK_LAVA_EXTINGUISH, "Normal"),
+              new RandomizationSound(Sound.ENTITY_CREEPER_PRIMED, "Ssss")
             });
   }
 }

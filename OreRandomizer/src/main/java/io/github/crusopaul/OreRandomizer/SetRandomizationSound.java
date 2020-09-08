@@ -1,5 +1,6 @@
 package io.github.crusopaul.OreRandomizer;
 
+import io.github.crusopaul.VersionHandler.RandomizationSoundList;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -7,72 +8,62 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SetRandomizationSound implements CommandExecutor {
+  SetRandomizationSound(OreListener oreListenerToSet) {
+    this.oreListener = oreListenerToSet;
+    this.soundList = oreListenerToSet.soundList;
+  }
 
   private OreListener oreListener;
-
-  SetRandomizationSound(OreListener oreListenerToSet) {
-
-    this.oreListener = oreListenerToSet;
-  }
+  private RandomizationSoundList soundList;
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    final boolean ret;
 
     if (sender.hasPermission("OreRandomizer.SetRandomizationSound")
         || !(sender instanceof Player)) {
+      final String soundToSet = validityCheckAndErrorMessage(sender, args);
 
-      if (!validityCheckAndErrorMessage(sender, args)) {
+      if (!soundToSet.isEmpty()) {
+        this.oreListener.getConfigFile().set("RandomizationSound", soundToSet);
+        this.soundList.setSound(this.oreListener.getConfigFile());
+        this.oreListener.saveConfigFile();
+        sender.sendMessage("Randomization sound set to " + soundToSet + ".");
 
-        return false;
+        ret = true;
+      } else {
+        ret = false;
       }
-
-      String configuredSound =
-          args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
-
-      this.oreListener.getConfigFile().set("RandomizationSound", configuredSound);
-
-      this.oreListener.SetRandomizationSound(configuredSound);
-      this.oreListener.saveConfigFile();
-      sender.sendMessage("Randomization sound set to " + configuredSound + ".");
-
     } else {
-
       sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
+
+      ret = false;
     }
 
-    return true;
+    return ret;
   }
 
-  public boolean validityCheckAndErrorMessage(CommandSender sender, String[] args) {
+  private String validityCheckAndErrorMessage(CommandSender sender, String[] args) {
+    String soundToPlay = "";
 
-    boolean validNumberOfArgs;
-    String soundToPlay;
-    boolean validSound = false;
-
-    validNumberOfArgs = args.length == 1;
-
-    if (validNumberOfArgs) {
-
-      soundToPlay = args[0].toUpperCase();
-
-      if (!soundToPlay.equals("BUZZ")
-          && !soundToPlay.equals("SSSS")
-          && !soundToPlay.equals("NORMAL")) {
-
-        sender.sendMessage(
-            ChatColor.RED
-                + "Sound not valid, allowed sounds are \"Buzz\", \"Ssss\", and \"Normal\".");
-
-      } else {
-
-        validSound = true;
+    if (args.length == 1) {
+      for (int i = 0; i < this.soundList.list.length; i++) {
+        if (this.soundList.list[i].getNormalName().equals(args[0].toLowerCase())) {
+          soundToPlay = this.soundList.list[i].getName();
+          break;
+        }
       }
 
+      if (soundToPlay.isEmpty()) {
+        sender.sendMessage(
+            ChatColor.RED + "Sound \"" + args[0] + "\" is not a valid sound specifier.");
+        sender.sendMessage(ChatColor.RED + "Valid sound specifiers are:");
+        sender.sendMessage(ChatColor.RED + this.soundList.getLingualList());
+      }
     } else {
-
       sender.sendMessage(ChatColor.RED + "/SetRandomizationSound takes one argument.");
     }
 
-    return validNumberOfArgs && validSound;
+    return soundToPlay;
   }
 }

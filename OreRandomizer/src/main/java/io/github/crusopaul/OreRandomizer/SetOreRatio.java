@@ -26,11 +26,9 @@ public class SetOreRatio implements CommandExecutor {
       if (!oreNode.isEmpty()) {
         final String oreSpecifier =
             args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
-
         this.oreListener.getConfigFile().set(oreNode, Integer.parseInt(args[1]));
         this.materialList.populateRatios(this.oreListener.getConfigFile());
         this.materialList.populateThresholds();
-
         sender.sendMessage(oreSpecifier + " set to " + args[1] + ".");
 
         ret = true;
