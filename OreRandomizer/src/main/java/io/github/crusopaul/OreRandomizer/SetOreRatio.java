@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SetOreRatio implements CommandExecutor {
-
   SetOreRatio(OreListener oreListenerToSet) {
     this.oreListener = oreListenerToSet;
     this.materialList = oreListenerToSet.materialList;
@@ -19,31 +18,36 @@ public class SetOreRatio implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    final boolean ret;
 
     if (sender.hasPermission("OreRandomizer.SetOreRatio") || !(sender instanceof Player)) {
       final String oreNode = validityCheckAndErrorMessage(sender, args);
 
-      if (oreNode.isEmpty()) {
-        return false;
+      if (!oreNode.isEmpty()) {
+        final String oreSpecifier =
+            args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
+
+        this.oreListener.getConfigFile().set(oreNode, Integer.parseInt(args[1]));
+        this.materialList.populateRatios(this.oreListener.getConfigFile());
+        this.materialList.populateThresholds();
+
+        sender.sendMessage(oreSpecifier + " set to " + args[1] + ".");
+
+        ret = true;
+      } else {
+        ret = false;
       }
-
-      final String oreSpecifier =
-          args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
-
-      this.oreListener.getConfigFile().set(oreNode, Integer.parseInt(args[1]));
-      this.oreListener.SetOreRatio();
-      this.oreListener.saveConfigFile();
-      sender.sendMessage(oreSpecifier + " set to " + args[1] + ".");
     } else {
       sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
+
+      ret = false;
     }
 
-    return true;
+    return ret;
   }
 
-  public String validityCheckAndErrorMessage(CommandSender sender, String[] args) {
-
-    boolean correctNumberOfArgs = (args.length == 2);
+  private String validityCheckAndErrorMessage(CommandSender sender, String[] args) {
+    final boolean correctNumberOfArgs = (args.length == 2);
     String validOreReference = "";
     boolean oreRatioIsIntAndInValidRange = false;
 
@@ -61,7 +65,6 @@ public class SetOreRatio implements CommandExecutor {
       try {
         oreRatioIsIntAndInValidRange = (Integer.parseInt(args[1]) > -1);
       } catch (NumberFormatException e) {
-        oreRatioIsIntAndInValidRange = false;
       }
     }
 
