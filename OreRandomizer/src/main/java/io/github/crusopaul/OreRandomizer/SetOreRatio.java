@@ -1,5 +1,7 @@
 package io.github.crusopaul.OreRandomizer;
 
+import io.github.crusopaul.VersionHandler.BadMaterialNodeException;
+import io.github.crusopaul.VersionHandler.NegativeRatioException;
 import io.github.crusopaul.VersionHandler.RandomizedMaterialList;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -18,7 +20,7 @@ public class SetOreRatio implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    final boolean ret;
+    boolean ret;
 
     if (sender.hasPermission("OreRandomizer.SetOreRatio") || !(sender instanceof Player)) {
       final String oreNode = validityCheckAndErrorMessage(sender, args);
@@ -27,17 +29,30 @@ public class SetOreRatio implements CommandExecutor {
         final String oreSpecifier =
             args[0].substring(0, 1).toUpperCase() + args[0].substring(1).toLowerCase();
         this.oreListener.getConfigFile().set(oreNode, Integer.parseInt(args[1]));
-        this.materialList.populateRatios(this.oreListener.getConfigFile());
-        this.materialList.populateThresholds();
-        sender.sendMessage(oreSpecifier + " set to " + args[1] + ".");
 
-        ret = true;
+        try {
+          this.materialList.populateRatios(this.oreListener.getConfigFile());
+          this.materialList.populateThresholds();
+          this.oreListener.saveConfigFile();
+          ret = true;
+        } catch (final NullPointerException e) {
+          sender.sendMessage(ChatColor.RED + e.getMessage());
+          e.printStackTrace();
+          ret = false;
+        } catch (final NegativeRatioException e) {
+          sender.sendMessage(ChatColor.RED + e.getMessage());
+          ret = false;
+        } catch (final BadMaterialNodeException e) {
+          sender.sendMessage(ChatColor.RED + e.getMessage());
+          ret = false;
+        }
+
+        sender.sendMessage(oreSpecifier + " set to " + args[1] + ".");
       } else {
         ret = false;
       }
     } else {
       sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
-
       ret = false;
     }
 
@@ -50,7 +65,6 @@ public class SetOreRatio implements CommandExecutor {
     boolean oreRatioIsIntAndInValidRange = false;
 
     if (correctNumberOfArgs) {
-
       final String normalizedOreSpecifier = args[0].toLowerCase();
 
       for (int i = 0; i < this.materialList.list.length; i++) {
@@ -63,6 +77,7 @@ public class SetOreRatio implements CommandExecutor {
       try {
         oreRatioIsIntAndInValidRange = (Integer.parseInt(args[1]) > -1);
       } catch (NumberFormatException e) {
+        oreRatioIsIntAndInValidRange = false;
       }
     }
 
