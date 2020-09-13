@@ -2,13 +2,18 @@ package io.github.crusopaul.OreRandomizer;
 
 import io.github.crusopaul.VersionHandler.BadSoundNodeException;
 import io.github.crusopaul.VersionHandler.RandomizationSoundList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+import org.bukkit.util.StringUtil;
 
-public class SetRandomizationSound implements CommandExecutor {
+class SetRandomizationSound implements CommandExecutor, TabCompleter {
   SetRandomizationSound(OreListener oreListenerToSet) {
     this.oreListener = oreListenerToSet;
     this.soundList = oreListenerToSet.soundList;
@@ -62,6 +67,31 @@ public class SetRandomizationSound implements CommandExecutor {
       ret = false;
     } else {
       ret = true;
+    }
+
+    return ret;
+  }
+
+  @Override
+  public List<String> onTabComplete(
+      CommandSender sender, Command cmd, String label, String[] args) {
+    final List<String> completionList = new ArrayList<String>();
+
+    if (args.length == 1) {
+      StringUtil.copyPartialMatches(args[0], getSoundNames(), completionList);
+      Collections.sort(completionList);
+    }
+
+    return completionList;
+  }
+
+  private List<String> getSoundNames() {
+    final List<String> ret = new ArrayList<String>();
+
+    for (int i = 0; i < this.soundList.list.length; i++) {
+      if (!this.soundList.list[i].getName().equals(this.soundList.getSound().getName())) {
+        ret.add(this.soundList.list[i].getName());
+      }
     }
 
     return ret;

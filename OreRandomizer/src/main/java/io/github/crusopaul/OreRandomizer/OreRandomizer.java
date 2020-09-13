@@ -31,7 +31,6 @@ public class OreRandomizer extends JavaPlugin {
           this.getCommand("GetAllowedWorlds").setExecutor(new GetAllowedWorlds(this.oreListener));
           this.getCommand("RemoveAllowedWorld")
               .setExecutor(new RemoveAllowedWorld(this.oreListener));
-          this.getCommand("ToggleCreeperSound").setExecutor(new ToggleCreeperSound());
           this.getCommand("GetRandomizationSound")
               .setExecutor(new GetRandomizationSound(this.oreListener));
           this.getCommand("SetRandomizationSound")

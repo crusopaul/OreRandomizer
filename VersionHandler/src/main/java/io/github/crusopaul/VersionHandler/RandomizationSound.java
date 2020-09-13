@@ -11,7 +11,7 @@ public class RandomizationSound {
   private Sound sound;
   private String name;
 
-  public Sound getSound() {
+  public Sound getEnum() {
     return this.sound;
   }
 

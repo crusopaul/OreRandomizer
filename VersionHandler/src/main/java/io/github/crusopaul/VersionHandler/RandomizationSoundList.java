@@ -56,11 +56,11 @@ public class RandomizationSoundList {
     }
   }
 
-  public Sound getSound() {
-    Sound ret = Sound.BLOCK_LAVA_EXTINGUISH;
+  public RandomizationSound getSound() {
+    RandomizationSound ret = new RandomizationSound(Sound.BLOCK_LAVA_EXTINGUISH, "Normal");
 
     if (this.soundToPlayIndex != -1) {
-      ret = this.list[this.soundToPlayIndex].getSound();
+      ret = this.list[this.soundToPlayIndex];
     }
 
     return ret;

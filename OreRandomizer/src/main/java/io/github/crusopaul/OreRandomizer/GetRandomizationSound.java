@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class GetRandomizationSound implements CommandExecutor {
+class GetRandomizationSound implements CommandExecutor {
   GetRandomizationSound(OreListener oreListenerToSet) {
     this.soundList = oreListenerToSet.soundList;
   }
@@ -24,12 +24,10 @@ public class GetRandomizationSound implements CommandExecutor {
         ret = false;
       } else {
         sender.sendMessage("Randomization sound is: " + this.soundList.getSoundName() + ".");
-
         ret = true;
       }
     } else {
       sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
-
       ret = false;
     }
 

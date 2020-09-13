@@ -1,110 +1,117 @@
 package io.github.crusopaul.OreRandomizer;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+import org.bukkit.util.StringUtil;
 
-public class GetAllowedWorlds implements CommandExecutor {
-
-  private FileConfiguration config;
-
+class GetAllowedWorlds implements CommandExecutor, TabCompleter {
   GetAllowedWorlds(OreListener oreListenerToSet) {
-
-    this.config = oreListenerToSet.getConfigFile();
+    this.allowedWorlds = oreListenerToSet.GetAllowedWorlds();
   }
+
+  private List<String> allowedWorlds;
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    final boolean ret;
 
     if (sender.hasPermission("OreRandomizer.GetAllowedWorld") || !(sender instanceof Player)) {
-
-      if (!validityCheckAndErrorMessage(sender, args)) {
-
-        return false;
-      }
-
-      List<String> allowedWorlds = this.config.getStringList("AllowedWorlds");
-
       if (args.length > 0) {
+        final String worldSpecifier = validityCheckAndErrorMessage(sender, args);
 
-        String normalizedWorldReference = args[0].toLowerCase();
-        String normalizedAllowedWorldReference;
-        boolean foundActiveWorld = false;
-        String foundWorldName = "";
+        if (!worldSpecifier.isEmpty()) {
+          boolean worldActive = false;
 
-        for (int i = 0; i < allowedWorlds.size(); i++) {
-
-          normalizedAllowedWorldReference = allowedWorlds.get(i).toLowerCase();
-
-          if (normalizedAllowedWorldReference.equals(normalizedWorldReference)) {
-
-            foundWorldName = allowedWorlds.get(i);
-            foundActiveWorld = true;
+          for (int i = 0; i < allowedWorlds.size(); i++) {
+            if (worldSpecifier.equals(allowedWorlds.get(i))) {
+              worldActive = true;
+              break;
+            }
           }
-        }
 
-        if (foundActiveWorld) {
+          if (worldActive) {
+            sender.sendMessage(
+                ChatColor.BLUE + "OreRandomizer is active in " + worldSpecifier + ".");
+          } else {
+            sender.sendMessage(
+                ChatColor.BLUE + "OreRandomizer is inactive in " + worldSpecifier + ".");
+          }
 
-          sender.sendMessage(
-              ChatColor.BLUE + "OreRandomizer is active in World \"" + foundWorldName + "\".");
-
+          ret = true;
         } else {
-
-          sender.sendMessage(
-              ChatColor.BLUE + "OreRandomizer is inactive in World \"" + args[0] + "\".");
+          ret = false;
         }
-
       } else {
-
-        sender.sendMessage(ChatColor.BLUE + "OreRandomizer is active in Worlds:");
+        sender.sendMessage(ChatColor.BLUE + "OreRandomizer is active in worlds:");
 
         for (int i = 0; i < allowedWorlds.size(); i++) {
-
           sender.sendMessage(ChatColor.BLUE + allowedWorlds.get(i));
         }
+
+        ret = true;
       }
-
     } else {
-
       sender.sendMessage(ChatColor.RED + cmd.getPermissionMessage());
+      ret = false;
     }
 
-    return true;
+    return ret;
   }
 
-  public boolean validityCheckAndErrorMessage(CommandSender sender, String[] args) {
-
-    String normalizedWorldReference;
-    boolean worldExists = false;
+  private String validityCheckAndErrorMessage(CommandSender sender, String[] args) {
+    String validWorldReference = "";
 
     if (args.length > 0) {
-
-      normalizedWorldReference = args[0].toLowerCase();
-      String normalizedAvailableWorldReference;
+      final String normalizedWorldSpecifier = args[0].toLowerCase();
+      String worldReference;
+      String normalizedWorldReference;
 
       for (int i = 0; i < Bukkit.getWorlds().size(); i++) {
+        worldReference = Bukkit.getWorlds().get(i).getName();
+        normalizedWorldReference = worldReference.toLowerCase();
 
-        normalizedAvailableWorldReference = Bukkit.getWorlds().get(i).getName().toLowerCase();
-
-        if (normalizedAvailableWorldReference.equals(normalizedWorldReference)) {
-
-          worldExists = true;
+        if (normalizedWorldReference.equals(normalizedWorldSpecifier)) {
+          validWorldReference = worldReference;
+          break;
         }
       }
 
-      if (!worldExists) {
-
+      if (validWorldReference.isEmpty()) {
         sender.sendMessage(ChatColor.RED + "No such world \"" + args[0] + "\".");
       }
-
-      return worldExists;
     }
 
-    return true;
+    return validWorldReference;
+  }
+
+  @Override
+  public List<String> onTabComplete(
+      CommandSender sender, Command cmd, String label, String[] args) {
+    final List<String> completionList = new ArrayList<String>();
+
+    if (args.length == 1) {
+      StringUtil.copyPartialMatches(args[0], getWorldNames(), completionList);
+      Collections.sort(completionList);
+    }
+
+    return completionList;
+  }
+
+  private List<String> getWorldNames() {
+    final List<String> ret = new ArrayList<String>();
+
+    for (int i = 0; i < Bukkit.getWorlds().size(); i++) {
+      ret.add(Bukkit.getWorlds().get(i).getName());
+    }
+
+    return ret;
   }
 }

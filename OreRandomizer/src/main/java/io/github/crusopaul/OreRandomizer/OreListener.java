@@ -13,7 +13,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFormEvent;
 
-public class OreListener implements Listener {
+class OreListener implements Listener {
   OreListener(
       FileConfiguration configFileToSet,
       File configToSet,
@@ -81,7 +81,8 @@ public class OreListener implements Listener {
         involvedBlock.setType(this.materialList.getRandomOre());
         involvedBlock
             .getWorld()
-            .playSound(involvedBlock.getLocation(), this.soundList.getSound(), 1, (float) 1);
+            .playSound(
+                involvedBlock.getLocation(), this.soundList.getSound().getEnum(), 1, (float) 1);
         break;
       case STONE:
       case OBSIDIAN:
@@ -89,7 +90,8 @@ public class OreListener implements Listener {
         involvedBlock.setType(newBlockType);
         involvedBlock
             .getWorld()
-            .playSound(involvedBlock.getLocation(), this.soundList.getSound(), 1, (float) 1);
+            .playSound(
+                involvedBlock.getLocation(), this.soundList.getSound().getEnum(), 1, (float) 1);
         break;
       default:
         break;

@@ -3,13 +3,18 @@ package io.github.crusopaul.OreRandomizer;
 import io.github.crusopaul.VersionHandler.BadMaterialNodeException;
 import io.github.crusopaul.VersionHandler.NegativeRatioException;
 import io.github.crusopaul.VersionHandler.RandomizedMaterialList;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+import org.bukkit.util.StringUtil;
 
-public class SetOreRatio implements CommandExecutor {
+class SetOreRatio implements CommandExecutor, TabCompleter {
   SetOreRatio(OreListener oreListenerToSet) {
     this.oreListener = oreListenerToSet;
     this.materialList = oreListenerToSet.materialList;
@@ -93,5 +98,28 @@ public class SetOreRatio implements CommandExecutor {
     }
 
     return validOreReference;
+  }
+
+  @Override
+  public List<String> onTabComplete(
+      CommandSender sender, Command cmd, String label, String[] args) {
+    final List<String> completionList = new ArrayList<String>();
+
+    if (args.length == 1) {
+      StringUtil.copyPartialMatches(args[0], getMaterialNames(), completionList);
+      Collections.sort(completionList);
+    }
+
+    return completionList;
+  }
+
+  private List<String> getMaterialNames() {
+    final List<String> ret = new ArrayList<String>();
+
+    for (int i = 0; i < this.materialList.list.length; i++) {
+      ret.add(this.materialList.list[i].getName());
+    }
+
+    return ret;
   }
 }
