@@ -30,6 +30,7 @@
     <module>VersionHandler</module>
     <module>vBees</module>
     <module>vPreBees</module>
+    <module>vLegacy</module>
     <module>OreRandomizer</module>
   </modules>
   <repositories>

@@ -7,8 +7,8 @@
     <maven.compiler.target>12</maven.compiler.target>
   </properties>
   <groupId>io.github.crusopaul</groupId>
-  <artifactId>OreRandomizer</artifactId>
-  <version>1.2.3-SNAPSHOT</version>
+  <artifactId>vLegacy</artifactId>
+  <version>latest</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
@@ -17,8 +17,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>1.8</source>
           <target>1.8</target>
+          <source>1.8</source>
         </configuration>
       </plugin>
     </plugins>
@@ -31,41 +31,9 @@
   <dependencies>
     <dependency>
       <groupId>io.github.crusopaul</groupId>
-      <artifactId>vBees</artifactId>
-      <version>latest</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>io.github.crusopaul</groupId>
-      <artifactId>vPreBees</artifactId>
-      <version>latest</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>io.github.crusopaul</groupId>
-      <artifactId>vLegacy</artifactId>
+      <artifactId>VersionHandler</artifactId>
       <version>latest</version>
       <type>jar</type>
     </dependency>
   </dependencies>
-  <profiles>
-    <profile>
-      <id>JarOutputOverride</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>3.2.0</version>
-            <configuration>
-              <source>1.8</source>
-              <target>1.8</target>
-              <outputDirectory>${dir}</outputDirectory>
-              <finalName>${name}</finalName>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
