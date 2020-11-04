@@ -82,7 +82,8 @@ public class OreRandomizer extends JavaPlugin {
           || spigotAPIVersion.equals("1.13.1")
           || spigotAPIVersion.equals("1.13")) {
         versionHandler = "vPreBees";
-      } else if (spigotAPIVersion.equals("1.16.3")
+      } else if (spigotAPIVersion.equals("1.16.4")
+          || spigotAPIVersion.equals("1.16.3")
           || spigotAPIVersion.equals("1.16.2")
           || spigotAPIVersion.equals("1.16.1")
           || spigotAPIVersion.equals("1.16")
