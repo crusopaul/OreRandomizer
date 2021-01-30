@@ -1,7 +1,8 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.OreRandomizer.command;
 
-import io.github.crusopaul.VersionHandler.BadSoundNodeException;
-import io.github.crusopaul.VersionHandler.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.compat.exception.BadSoundNodeException;
+import io.github.crusopaul.OreRandomizer.compat.list.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.listener.OreListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,8 +14,8 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
 
-class SetRandomizationSound implements CommandExecutor, TabCompleter {
-  SetRandomizationSound(OreListener oreListenerToSet) {
+public class SetRandomizationSound implements CommandExecutor, TabCompleter {
+  public SetRandomizationSound(OreListener oreListenerToSet) {
     this.oreListener = oreListenerToSet;
     this.soundList = oreListenerToSet.soundList;
   }

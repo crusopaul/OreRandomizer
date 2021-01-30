@@ -1,4 +1,4 @@
-package io.github.crusopaul.VersionHandler;
+package io.github.crusopaul.OreRandomizer.compat.element;
 
 import org.bukkit.Sound;
 

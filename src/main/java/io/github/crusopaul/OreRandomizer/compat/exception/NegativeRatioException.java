@@ -1,4 +1,4 @@
-package io.github.crusopaul.VersionHandler;
+package io.github.crusopaul.OreRandomizer.compat.exception;
 
 public class NegativeRatioException extends Exception {
   public NegativeRatioException(String errorMessage) {

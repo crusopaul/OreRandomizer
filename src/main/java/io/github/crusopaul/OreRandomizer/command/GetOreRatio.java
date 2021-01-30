@@ -1,6 +1,7 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.OreRandomizer.command;
 
-import io.github.crusopaul.VersionHandler.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.compat.list.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.listener.OreListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,8 +13,8 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
 
-class GetOreRatio implements CommandExecutor, TabCompleter {
-  GetOreRatio(OreListener oreListenerToSet) {
+public class GetOreRatio implements CommandExecutor, TabCompleter {
+  public GetOreRatio(OreListener oreListenerToSet) {
     this.materialList = oreListenerToSet.materialList;
   }
 

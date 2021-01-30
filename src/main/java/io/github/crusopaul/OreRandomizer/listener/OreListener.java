@@ -1,7 +1,7 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.OreRandomizer.listener;
 
-import io.github.crusopaul.VersionHandler.RandomizationSoundList;
-import io.github.crusopaul.VersionHandler.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.compat.list.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.compat.list.RandomizedMaterialList;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFormEvent;
 
-class OreListener implements Listener {
-  OreListener(
+public class OreListener implements Listener {
+  public OreListener(
       FileConfiguration configFileToSet,
       File configToSet,
       RandomizedMaterialList randomizedMaterialList,

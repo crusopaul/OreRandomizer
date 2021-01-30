@@ -1,6 +1,7 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.OreRandomizer.command;
 
-import io.github.crusopaul.VersionHandler.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.compat.list.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.listener.OreListener;
 import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.ChatColor;
@@ -10,8 +11,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-class GetRandomizationSound implements CommandExecutor, TabCompleter {
-  GetRandomizationSound(OreListener oreListenerToSet) {
+public class GetRandomizationSound implements CommandExecutor, TabCompleter {
+  public GetRandomizationSound(OreListener oreListenerToSet) {
     this.soundList = oreListenerToSet.soundList;
   }
 

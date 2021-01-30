@@ -1,5 +1,8 @@
-package io.github.crusopaul.VersionHandler;
+package io.github.crusopaul.OreRandomizer.compat.list;
 
+import io.github.crusopaul.OreRandomizer.compat.element.RandomizedMaterial;
+import io.github.crusopaul.OreRandomizer.compat.exception.BadMaterialNodeException;
+import io.github.crusopaul.OreRandomizer.compat.exception.NegativeRatioException;
 import java.util.Random;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;

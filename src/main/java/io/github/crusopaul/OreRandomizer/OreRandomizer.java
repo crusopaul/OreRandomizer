@@ -1,9 +1,17 @@
 package io.github.crusopaul.OreRandomizer;
 
-import io.github.crusopaul.VersionHandler.BadMaterialNodeException;
-import io.github.crusopaul.VersionHandler.BadSoundNodeException;
-import io.github.crusopaul.VersionHandler.NegativeRatioException;
-import io.github.crusopaul.VersionHandler.VersionInterface;
+import io.github.crusopaul.OreRandomizer.command.AddNewWorld;
+import io.github.crusopaul.OreRandomizer.command.GetAllowedWorlds;
+import io.github.crusopaul.OreRandomizer.command.GetOreRatio;
+import io.github.crusopaul.OreRandomizer.command.GetRandomizationSound;
+import io.github.crusopaul.OreRandomizer.command.RemoveAllowedWorld;
+import io.github.crusopaul.OreRandomizer.command.SetOreRatio;
+import io.github.crusopaul.OreRandomizer.command.SetRandomizationSound;
+import io.github.crusopaul.OreRandomizer.compat.VersionInterface;
+import io.github.crusopaul.OreRandomizer.compat.exception.BadMaterialNodeException;
+import io.github.crusopaul.OreRandomizer.compat.exception.BadSoundNodeException;
+import io.github.crusopaul.OreRandomizer.compat.exception.NegativeRatioException;
+import io.github.crusopaul.OreRandomizer.listener.OreListener;
 import java.io.File;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;

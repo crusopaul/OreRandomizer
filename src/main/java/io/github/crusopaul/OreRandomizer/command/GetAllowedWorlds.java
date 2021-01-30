@@ -1,5 +1,6 @@
-package io.github.crusopaul.OreRandomizer;
+package io.github.crusopaul.OreRandomizer.command;
 
+import io.github.crusopaul.OreRandomizer.listener.OreListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -12,8 +13,8 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
 
-class GetAllowedWorlds implements CommandExecutor, TabCompleter {
-  GetAllowedWorlds(OreListener oreListenerToSet) {
+public class GetAllowedWorlds implements CommandExecutor, TabCompleter {
+  public GetAllowedWorlds(OreListener oreListenerToSet) {
     this.allowedWorlds = oreListenerToSet.GetAllowedWorlds();
   }
 
