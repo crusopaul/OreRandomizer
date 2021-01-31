@@ -8,7 +8,6 @@ import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 
 public class RandomizedMaterialList {
-
   public RandomizedMaterialList(RandomizedMaterial[] listToSet) {
     this.list = listToSet;
     this.rng = new Random();
