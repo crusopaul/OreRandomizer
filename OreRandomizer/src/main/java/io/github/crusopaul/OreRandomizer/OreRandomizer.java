@@ -59,39 +59,37 @@ public class OreRandomizer extends JavaPlugin {
   }
 
   private boolean setVersionHandler() {
-    final String spigotAPIVersion =
-        Bukkit.getVersion()
-            .substring(Bukkit.getVersion().indexOf("1."), Bukkit.getVersion().indexOf(')'));
+    final String spigotAPIVersion = Bukkit.getVersion();
     String versionHandler = "";
     boolean ret;
 
     try {
-      if (spigotAPIVersion.equals("1.12.2")
-          || spigotAPIVersion.equals("1.12.1")
-          || spigotAPIVersion.equals("1.12")
-          || spigotAPIVersion.equals("1.11.2")
-          || spigotAPIVersion.equals("1.11.1")
-          || spigotAPIVersion.equals("1.11")) {
-        versionHandler = "vLegacy";
-      } else if (spigotAPIVersion.equals("1.14.4")
-          || spigotAPIVersion.equals("1.14.3")
-          || spigotAPIVersion.equals("1.14.2")
-          || spigotAPIVersion.equals("1.14.1")
-          || spigotAPIVersion.equals("1.14")
-          || spigotAPIVersion.equals("1.13.2")
-          || spigotAPIVersion.equals("1.13.1")
-          || spigotAPIVersion.equals("1.13")) {
-        versionHandler = "vPreBees";
-      } else if (spigotAPIVersion.equals("1.16.5")
-          || spigotAPIVersion.equals("1.16.4")
-          || spigotAPIVersion.equals("1.16.3")
-          || spigotAPIVersion.equals("1.16.2")
-          || spigotAPIVersion.equals("1.16.1")
-          || spigotAPIVersion.equals("1.16")
-          || spigotAPIVersion.equals("1.15.2")
-          || spigotAPIVersion.equals("1.15.1")
-          || spigotAPIVersion.equals("1.15")) {
+      if (spigotAPIVersion.contains("1.16.5")
+          || spigotAPIVersion.contains("1.16.4")
+          || spigotAPIVersion.contains("1.16.3")
+          || spigotAPIVersion.contains("1.16.2")
+          || spigotAPIVersion.contains("1.16.1")
+          || spigotAPIVersion.contains("1.16")
+          || spigotAPIVersion.contains("1.15.2")
+          || spigotAPIVersion.contains("1.15.1")
+          || spigotAPIVersion.contains("1.15")) {
         versionHandler = "vBees";
+      } else if (spigotAPIVersion.contains("1.14.4")
+          || spigotAPIVersion.contains("1.14.3")
+          || spigotAPIVersion.contains("1.14.2")
+          || spigotAPIVersion.contains("1.14.1")
+          || spigotAPIVersion.contains("1.14")
+          || spigotAPIVersion.contains("1.13.2")
+          || spigotAPIVersion.contains("1.13.1")
+          || spigotAPIVersion.contains("1.13")) {
+        versionHandler = "vPreBees";
+      } else if (spigotAPIVersion.contains("1.12.2")
+          || spigotAPIVersion.contains("1.12.1")
+          || spigotAPIVersion.contains("1.12")
+          || spigotAPIVersion.contains("1.11.2")
+          || spigotAPIVersion.contains("1.11.1")
+          || spigotAPIVersion.contains("1.11")) {
+        versionHandler = "vLegacy";
       }
 
       final Class<?> versionHandlerInstance =

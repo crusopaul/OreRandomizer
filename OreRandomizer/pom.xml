@@ -8,7 +8,7 @@
   </properties>
   <groupId>io.github.crusopaul</groupId>
   <artifactId>OreRandomizer</artifactId>
-  <version>1.3.2-SNAPSHOT</version>
+  <version>1.3.3-SNAPSHOT</version>
   <packaging>jar</packaging>
   <build>
     <plugins>
