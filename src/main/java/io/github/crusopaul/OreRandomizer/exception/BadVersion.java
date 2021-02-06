@@ -1,4 +1,4 @@
-package io.github.crusopaul.OreRandomizer.compat.exception;
+package io.github.crusopaul.OreRandomizer.exception;
 
 public class BadVersion extends Exception {
   public BadVersion(String errorMessage) {

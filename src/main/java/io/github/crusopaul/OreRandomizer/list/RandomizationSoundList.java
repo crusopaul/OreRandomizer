@@ -1,7 +1,7 @@
-package io.github.crusopaul.OreRandomizer.compat.list;
+package io.github.crusopaul.OreRandomizer.list;
 
-import io.github.crusopaul.OreRandomizer.compat.element.RandomizationSound;
-import io.github.crusopaul.OreRandomizer.compat.exception.BadSoundNodeException;
+import io.github.crusopaul.OreRandomizer.element.RandomizationSound;
+import io.github.crusopaul.OreRandomizer.exception.BadSoundNodeException;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
 

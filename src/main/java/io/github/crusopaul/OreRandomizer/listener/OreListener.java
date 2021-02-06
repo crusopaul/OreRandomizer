@@ -1,7 +1,7 @@
 package io.github.crusopaul.OreRandomizer.listener;
 
-import io.github.crusopaul.OreRandomizer.compat.list.RandomizationSoundList;
-import io.github.crusopaul.OreRandomizer.compat.list.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.list.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.list.RandomizedMaterialList;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;

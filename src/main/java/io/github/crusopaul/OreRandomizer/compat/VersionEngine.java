@@ -1,13 +1,13 @@
 package io.github.crusopaul.OreRandomizer.compat;
 
-import io.github.crusopaul.OreRandomizer.compat.element.RandomizationSound;
-import io.github.crusopaul.OreRandomizer.compat.element.RandomizedMaterial;
-import io.github.crusopaul.OreRandomizer.compat.exception.BadMaterialNodeException;
-import io.github.crusopaul.OreRandomizer.compat.exception.BadSoundNodeException;
-import io.github.crusopaul.OreRandomizer.compat.exception.BadVersion;
-import io.github.crusopaul.OreRandomizer.compat.exception.NegativeRatioException;
-import io.github.crusopaul.OreRandomizer.compat.list.RandomizationSoundList;
-import io.github.crusopaul.OreRandomizer.compat.list.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.element.RandomizationSound;
+import io.github.crusopaul.OreRandomizer.element.RandomizedMaterial;
+import io.github.crusopaul.OreRandomizer.exception.BadMaterialNodeException;
+import io.github.crusopaul.OreRandomizer.exception.BadSoundNodeException;
+import io.github.crusopaul.OreRandomizer.exception.BadVersion;
+import io.github.crusopaul.OreRandomizer.exception.NegativeRatioException;
+import io.github.crusopaul.OreRandomizer.list.RandomizationSoundList;
+import io.github.crusopaul.OreRandomizer.list.RandomizedMaterialList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

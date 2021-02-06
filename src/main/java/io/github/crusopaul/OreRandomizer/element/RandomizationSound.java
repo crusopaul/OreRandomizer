@@ -1,4 +1,4 @@
-package io.github.crusopaul.OreRandomizer.compat.element;
+package io.github.crusopaul.OreRandomizer.element;
 
 import org.bukkit.Sound;
 

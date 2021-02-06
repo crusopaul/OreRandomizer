@@ -1,6 +1,6 @@
 package io.github.crusopaul.OreRandomizer.command;
 
-import io.github.crusopaul.OreRandomizer.compat.list.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.list.RandomizedMaterialList;
 import io.github.crusopaul.OreRandomizer.listener.OreListener;
 import java.util.ArrayList;
 import java.util.Collections;
