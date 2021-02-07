@@ -54,37 +54,35 @@ public class VersionEngine {
   }
 
   private Version parseVersionString(String BukkitVersionString) {
-    final String spigotAPIVersion =
-        BukkitVersionString.substring(
-            BukkitVersionString.indexOf("1."), BukkitVersionString.indexOf(')'));
     final Version version;
 
-    if (spigotAPIVersion.equals("1.12.2")
-        || spigotAPIVersion.equals("1.12.1")
-        || spigotAPIVersion.equals("1.12")
-        || spigotAPIVersion.equals("1.11.2")
-        || spigotAPIVersion.equals("1.11.1")
-        || spigotAPIVersion.equals("1.11")) {
-      version = Version.Legacy;
-    } else if (spigotAPIVersion.equals("1.14.4")
-        || spigotAPIVersion.equals("1.14.3")
-        || spigotAPIVersion.equals("1.14.2")
-        || spigotAPIVersion.equals("1.14.1")
-        || spigotAPIVersion.equals("1.14")
-        || spigotAPIVersion.equals("1.13.2")
-        || spigotAPIVersion.equals("1.13.1")
-        || spigotAPIVersion.equals("1.13")) {
-      version = Version.PreBees;
-    } else if (spigotAPIVersion.equals("1.16.5")
-        || spigotAPIVersion.equals("1.16.4")
-        || spigotAPIVersion.equals("1.16.3")
-        || spigotAPIVersion.equals("1.16.2")
-        || spigotAPIVersion.equals("1.16.1")
-        || spigotAPIVersion.equals("1.16")
-        || spigotAPIVersion.equals("1.15.2")
-        || spigotAPIVersion.equals("1.15.1")
-        || spigotAPIVersion.equals("1.15")) {
+    System.out.println(BukkitVersionString);
+    if (BukkitVersionString.contains("1.16.5")
+        || BukkitVersionString.contains("1.16.4")
+        || BukkitVersionString.contains("1.16.3")
+        || BukkitVersionString.contains("1.16.2")
+        || BukkitVersionString.contains("1.16.1")
+        || BukkitVersionString.contains("1.16")
+        || BukkitVersionString.contains("1.15.2")
+        || BukkitVersionString.contains("1.15.1")
+        || BukkitVersionString.contains("1.15")) {
       version = Version.Bees;
+    } else if (BukkitVersionString.contains("1.14.4")
+        || BukkitVersionString.contains("1.14.3")
+        || BukkitVersionString.contains("1.14.2")
+        || BukkitVersionString.contains("1.14.1")
+        || BukkitVersionString.contains("1.14")
+        || BukkitVersionString.contains("1.13.2")
+        || BukkitVersionString.contains("1.13.1")
+        || BukkitVersionString.contains("1.13")) {
+      version = Version.PreBees;
+    } else if (BukkitVersionString.contains("1.12.2")
+        || BukkitVersionString.contains("1.12.1")
+        || BukkitVersionString.contains("1.12")
+        || BukkitVersionString.contains("1.11.2")
+        || BukkitVersionString.contains("1.11.1")
+        || BukkitVersionString.contains("1.11")) {
+      version = Version.Legacy;
     } else {
       version = Version.None;
     }
