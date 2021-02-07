@@ -8,8 +8,11 @@ import io.github.crusopaul.OreRandomizer.exception.BadVersion;
 import io.github.crusopaul.OreRandomizer.exception.NegativeRatioException;
 import io.github.crusopaul.OreRandomizer.list.RandomizationSoundList;
 import io.github.crusopaul.OreRandomizer.list.RandomizedMaterialList;
+import io.github.crusopaul.OreRandomizer.sort.MaterialListSorter;
+import io.github.crusopaul.OreRandomizer.sort.SoundListSorter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -126,6 +129,8 @@ public class VersionEngine {
         break;
     }
 
+    Collections.sort(matList, new MaterialListSorter());
+    Collections.sort(sndList, new SoundListSorter());
     randomizedMaterialList =
         new RandomizedMaterialList(matList.toArray(new RandomizedMaterial[matList.size()]));
     randomizationSoundList =
