@@ -3,8 +3,9 @@ package io.github.crusopaul.OreRandomizer.element;
 import org.bukkit.Material;
 
 public class RandomizedMaterial {
-  public RandomizedMaterial(Material rm, String mn, String fn) {
+  public RandomizedMaterial(Material rm, Material ds_rm, String mn, String fn) {
     this.randomizedMaterial = rm;
+    this.deepSlateRandomizedMaterial = ds_rm;
     this.materialNode = mn;
     this.friendlyName = fn;
     this.ratio = 0;
@@ -12,6 +13,7 @@ public class RandomizedMaterial {
   }
 
   private Material randomizedMaterial;
+  private Material deepSlateRandomizedMaterial;
   private String materialNode;
   private String friendlyName;
   private int ratio;
@@ -19,6 +21,14 @@ public class RandomizedMaterial {
 
   public Material getMaterial() {
     return this.randomizedMaterial;
+  }
+
+  public Material getDeepslateMaterial() {
+    return this.deepSlateRandomizedMaterial;
+  }
+
+  public void setDeepslateMaterial(Material materialToSet) {
+    this.deepSlateRandomizedMaterial = materialToSet;
   }
 
   public String getNode() {

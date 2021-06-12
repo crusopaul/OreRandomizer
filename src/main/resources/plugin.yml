@@ -1,5 +1,5 @@
 name: OreRandomizer
-version: "1.3.3"
+version: "1.4"
 api-version: 1.13
 main: io.github.crusopaul.OreRandomizer.OreRandomizer
 commands:

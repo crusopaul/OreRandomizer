@@ -77,8 +77,15 @@ public class OreListener implements Listener {
 
     switch (newBlockType) {
       case COBBLESTONE:
+      case COBBLED_DEEPSLATE:
         event.setCancelled(true);
-        involvedBlock.setType(this.materialList.getRandomOre());
+
+        if (involvedBlock.getLocation().getBlockY() < 17) {
+          involvedBlock.setType(this.materialList.getRandomOre(true));
+        } else {
+          involvedBlock.setType(this.materialList.getRandomOre(false));
+        }
+
         involvedBlock
             .getWorld()
             .playSound(
@@ -86,6 +93,7 @@ public class OreListener implements Listener {
         break;
       case STONE:
       case OBSIDIAN:
+      case DEEPSLATE:
         event.setCancelled(true);
         involvedBlock.setType(newBlockType);
         involvedBlock

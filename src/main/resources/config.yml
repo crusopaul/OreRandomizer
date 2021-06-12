@@ -1,7 +1,9 @@
 RandomSpawnRatios:
   Andesite: 5
-  Cobblestone: 20
+  Amethyst: 1
   Coal: 5
+  Cobblestone: 20
+  Copper: 1
   Diamond: 1
   Diorite: 3
   Emerald: 1

@@ -83,7 +83,7 @@ public class RandomizedMaterialList {
     }
   }
 
-  public Material getRandomOre() {
+  public Material getRandomOre(boolean deepslateVariant) {
     Material materialToReturn = Material.COBBLESTONE;
 
     switch (this.list.length) {
@@ -91,7 +91,11 @@ public class RandomizedMaterialList {
         break;
       case 1:
         if (this.list[0].getThreshold() != 0) {
-          materialToReturn = this.list[0].getMaterial();
+          if (deepslateVariant) {
+            materialToReturn = this.list[0].getDeepslateMaterial();
+          } else {
+            materialToReturn = this.list[0].getMaterial();
+          }
         }
         break;
       default:
@@ -100,7 +104,11 @@ public class RandomizedMaterialList {
           randomNumber = this.rng.nextInt(this.list[this.list.length - 1].getThreshold());
           for (int i = 0; i < this.list.length; i++) {
             if (randomNumber < this.list[i].getThreshold()) {
-              materialToReturn = this.list[i].getMaterial();
+              if (deepslateVariant) {
+                materialToReturn = this.list[i].getDeepslateMaterial();
+              } else {
+                materialToReturn = this.list[i].getMaterial();
+              }
               break;
             }
           }
