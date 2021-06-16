@@ -15,7 +15,7 @@ import org.bukkit.util.StringUtil;
 
 public class GetAllowedWorlds implements CommandExecutor, TabCompleter {
   public GetAllowedWorlds(OreListener oreListenerToSet) {
-    this.allowedWorlds = oreListenerToSet.GetAllowedWorlds();
+    this.allowedWorlds = oreListenerToSet.getAllowedWorlds();
   }
 
   private List<String> allowedWorlds;

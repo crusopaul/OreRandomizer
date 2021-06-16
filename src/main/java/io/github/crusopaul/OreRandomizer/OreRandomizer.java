@@ -2,11 +2,15 @@ package io.github.crusopaul.OreRandomizer;
 
 import io.github.crusopaul.OreRandomizer.command.AddNewWorld;
 import io.github.crusopaul.OreRandomizer.command.GetAllowedWorlds;
+import io.github.crusopaul.OreRandomizer.command.GetObsidianToggle;
 import io.github.crusopaul.OreRandomizer.command.GetOreRatio;
 import io.github.crusopaul.OreRandomizer.command.GetRandomizationSound;
+import io.github.crusopaul.OreRandomizer.command.GetStoneToggle;
 import io.github.crusopaul.OreRandomizer.command.RemoveAllowedWorld;
+import io.github.crusopaul.OreRandomizer.command.SetObsidianToggle;
 import io.github.crusopaul.OreRandomizer.command.SetOreRatio;
 import io.github.crusopaul.OreRandomizer.command.SetRandomizationSound;
+import io.github.crusopaul.OreRandomizer.command.SetStoneToggle;
 import io.github.crusopaul.OreRandomizer.compat.VersionEngine;
 import io.github.crusopaul.OreRandomizer.exception.BadMaterialNodeException;
 import io.github.crusopaul.OreRandomizer.exception.BadSoundNodeException;
@@ -42,6 +46,10 @@ public class OreRandomizer extends JavaPlugin {
           .setExecutor(new GetRandomizationSound(this.oreListener));
       this.getCommand("SetRandomizationSound")
           .setExecutor(new SetRandomizationSound(this.oreListener));
+      this.getCommand("GetObsidianToggle").setExecutor(new GetObsidianToggle(this.oreListener));
+      this.getCommand("SetObsidianToggle").setExecutor(new SetObsidianToggle(this.oreListener));
+      this.getCommand("GetStoneToggle").setExecutor(new GetStoneToggle(this.oreListener));
+      this.getCommand("SetStoneToggle").setExecutor(new SetStoneToggle(this.oreListener));
       this.getServer().getPluginManager().registerEvents(this.oreListener, this);
       this.getLogger().info("OreRandomizer enabled.");
     } catch (final BadVersion e) {

@@ -24,11 +24,15 @@ public class OreListener implements Listener {
     this.materialList = randomizedMaterialList;
     this.soundList = randomizationSoundList;
     this.AllowedWorlds = this.configFile.getStringList("AllowedWorlds");
+    this.RandomizeOnStoneCreation = this.configFile.getBoolean("RandomizeOnStoneCreation");
+    this.RandomizeOnObsidianCreation = this.configFile.getBoolean("RandomizeOnObsidianCreation");
   }
 
   private FileConfiguration configFile;
   private File config;
   private List<String> AllowedWorlds;
+  private boolean RandomizeOnStoneCreation;
+  private boolean RandomizeOnObsidianCreation;
 
   public RandomizedMaterialList materialList;
   public RandomizationSoundList soundList;
@@ -45,16 +49,32 @@ public class OreListener implements Listener {
     }
   }
 
-  public List<String> GetAllowedWorlds() {
+  public List<String> getAllowedWorlds() {
     return this.AllowedWorlds;
   }
 
-  public void RemoveAllowedWorld(int i) {
+  public void removeAllowedWorld(int i) {
     this.AllowedWorlds.remove(i);
   }
 
-  public void AddNewWorld(String worldToAdd) {
+  public void addNewWorld(String worldToAdd) {
     this.AllowedWorlds.add(worldToAdd);
+  }
+
+  public boolean getRandomizeOnStoneCreation() {
+    return this.RandomizeOnStoneCreation;
+  }
+
+  public void setRandomizeOnStoneCreation(boolean b) {
+    this.RandomizeOnStoneCreation = b;
+  }
+
+  public boolean getRandomizeOnObsidianCreation() {
+    return this.RandomizeOnObsidianCreation;
+  }
+
+  public void setRandomizeOnObsidianCreation(boolean b) {
+    this.RandomizeOnObsidianCreation = b;
   }
 
   @EventHandler
@@ -79,20 +99,20 @@ public class OreListener implements Listener {
       case COBBLESTONE:
       case COBBLED_DEEPSLATE:
         event.setCancelled(true);
-
-        if (involvedBlock.getLocation().getBlockY() < 17) {
-          involvedBlock.setType(this.materialList.getRandomOre(true));
-        } else {
-          involvedBlock.setType(this.materialList.getRandomOre(false));
-        }
-
-        involvedBlock
-            .getWorld()
-            .playSound(
-                involvedBlock.getLocation(), this.soundList.getSound().getEnum(), 1, (float) 1);
+        randomizeAndPlaySound(involvedBlock);
         break;
       case STONE:
+        if (this.RandomizeOnStoneCreation) {
+          event.setCancelled(true);
+          randomizeAndPlaySound(involvedBlock);
+        }
+        break;
       case OBSIDIAN:
+        if (this.RandomizeOnObsidianCreation) {
+          event.setCancelled(true);
+          randomizeAndPlaySound(involvedBlock);
+        }
+        break;
       case DEEPSLATE:
         event.setCancelled(true);
         involvedBlock.setType(newBlockType);
@@ -104,5 +124,17 @@ public class OreListener implements Listener {
       default:
         break;
     }
+  }
+
+  private void randomizeAndPlaySound(Block block) {
+    if (block.getLocation().getBlockY() < 17) {
+      block.setType(this.materialList.getRandomOre(true));
+    } else {
+      block.setType(this.materialList.getRandomOre(false));
+    }
+
+    block
+        .getWorld()
+        .playSound(block.getLocation(), this.soundList.getSound().getEnum(), 1, (float) 1);
   }
 }

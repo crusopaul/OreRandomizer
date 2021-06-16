@@ -11,7 +11,11 @@ RandomSpawnRatios:
   Granite: 3
   Iron: 4
   Lapis: 2
+  Obsidian: 0
   Redstone: 8
+  Stone: 0
+RandomizeOnStoneCreation: false
+RandomizeOnObsidianCreation: false
 RandomizationSound: Ssss
 AllowedWorlds:
   - world

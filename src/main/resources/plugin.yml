@@ -1,5 +1,5 @@
 name: OreRandomizer
-version: "1.4"
+version: "1.5"
 api-version: 1.13
 main: io.github.crusopaul.OreRandomizer.OreRandomizer
 commands:
@@ -33,6 +33,22 @@ commands:
     description: Makes OreRandomizer inactive for a specified world.
     permission-message: You do not have permission to use this command.
     usage: "Usage: /RemoveAllowedWorld <world>"
+  GetObsidianToggle:
+    description: Displays the current randomization behavior upon lava/water interaction that would lead to the creation of obsidian in vanilla MC.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /GetObsidianToggle"
+  SetObsidianToggle:
+    description: Sets the randomization behavior upon lava/water interaction that would lead to the creation of obsidian in vanilla MC.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /SetObsidianToggle <value>"
+  GetStoneToggle:
+    description: Displays the current randomization behavior upon lava/water interaction that would lead to the creation of stone in vanilla MC.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /GetStoneToggle"
+  SetStoneToggle:
+    description: Sets the randomization behavior upon lava/water interaction that would lead to the creation of stone in vanilla MC.
+    permission-message: You do not have permission to use this command.
+    usage: "Usage: /SetStoneToggle <value>"
 permissions:
   OreRandomizer.ToggleCreeperSound:
     description: Allows you to use the command ToggleCreeperSound.
@@ -58,6 +74,18 @@ permissions:
   OreRandomizer.RemoveAllowedWorld:
     description: Allows you to use the command RemoveAllowedWorld.
     default: true
+  OreRandomizer.GetObsidianToggle:
+    description: Allows you to use the command GetObsidianToggle
+    default: true
+  OreRandomizer.SetObsidianToggle:
+    description: Allows you to use the command SetObsidianToggle
+    default: true
+  OreRandomizer.GetStoneToggle:
+    description: Allows you to use the command GetStoneToggle
+    default: true
+  OreRandomizer.SetStoneToggle:
+    description: Allows you to use the command SetStoneToggle
+    default: true
   OreRandomizer.*:
     description: Wildcard permission.
     default: false
@@ -70,3 +98,7 @@ permissions:
       OreRandomizer.AddNewWorld: true
       OreRandomizer.GetAllowedWorlds: true
       OreRandomizer.RemoveAllowedWorld: true
+      OreRandomizer.GetObsidianToggle: true
+      OreRandomizer.SetObsidianToggle: true
+      OreRandomizer.GetStoneToggle: true
+      OreRandomizer.SetStoneToggle: true

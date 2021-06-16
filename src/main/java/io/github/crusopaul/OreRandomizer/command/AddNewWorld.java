@@ -28,8 +28,8 @@ public class AddNewWorld implements CommandExecutor, TabCompleter {
       final String worldSpecifier = validityCheckAndErrorMessage(sender, args);
 
       if (!worldSpecifier.isEmpty()) {
-        this.oreListener.AddNewWorld(worldSpecifier);
-        this.oreListener.getConfigFile().set("AllowedWorlds", this.oreListener.GetAllowedWorlds());
+        this.oreListener.addNewWorld(worldSpecifier);
+        this.oreListener.getConfigFile().set("AllowedWorlds", this.oreListener.getAllowedWorlds());
         this.oreListener.saveConfigFile();
         sender.sendMessage(
             ChatColor.BLUE + "OreRandomizer is now active for " + worldSpecifier + ".");
@@ -64,8 +64,8 @@ public class AddNewWorld implements CommandExecutor, TabCompleter {
       if (!worldReference.isEmpty()) {
         boolean worldActive = false;
 
-        for (int i = 0; i < this.oreListener.GetAllowedWorlds().size(); i++) {
-          normalizedWorldReference = this.oreListener.GetAllowedWorlds().get(i);
+        for (int i = 0; i < this.oreListener.getAllowedWorlds().size(); i++) {
+          normalizedWorldReference = this.oreListener.getAllowedWorlds().get(i);
 
           if (normalizedWorldReference.equals(normalizedWorldSpecifier)) {
             worldActive = true;
@@ -112,9 +112,9 @@ public class AddNewWorld implements CommandExecutor, TabCompleter {
       normalizedWorldReference = worldReference.toLowerCase();
       worldActive = false;
 
-      for (int j = 0; j < this.oreListener.GetAllowedWorlds().size(); j++) {
+      for (int j = 0; j < this.oreListener.getAllowedWorlds().size(); j++) {
         if (normalizedWorldReference.equals(
-            this.oreListener.GetAllowedWorlds().get(j).toLowerCase())) {
+            this.oreListener.getAllowedWorlds().get(j).toLowerCase())) {
           worldActive = true;
           break;
         }

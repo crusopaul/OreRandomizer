@@ -162,10 +162,17 @@ public class VersionEngine {
                       "RandomSpawnRatios.Lapis",
                       "Lapis"),
                   new RandomizedMaterial(
+                      Material.OBSIDIAN,
+                      Material.OBSIDIAN,
+                      "RandomSpawnRatios.Obsidian",
+                      "Obsidian"),
+                  new RandomizedMaterial(
                       Material.REDSTONE_ORE,
                       Material.DEEPSLATE_REDSTONE_ORE,
                       "RandomSpawnRatios.Redstone",
-                      "Redstone")));
+                      "Redstone"),
+                  new RandomizedMaterial(
+                      Material.STONE, Material.DEEPSLATE, "RandomSpawnRatios.Stone", "Stone")));
         } else {
           matList.addAll(
               Arrays.asList(
@@ -193,10 +200,17 @@ public class VersionEngine {
                   new RandomizedMaterial(
                       Material.LAPIS_ORE, Material.LAPIS_ORE, "RandomSpawnRatios.Lapis", "Lapis"),
                   new RandomizedMaterial(
+                      Material.OBSIDIAN,
+                      Material.OBSIDIAN,
+                      "RandomSpawnRatios.Obsidian",
+                      "Obsidian"),
+                  new RandomizedMaterial(
                       Material.REDSTONE_ORE,
                       Material.REDSTONE_ORE,
                       "RandomSpawnRatios.Redstone",
-                      "Redstone")));
+                      "Redstone"),
+                  new RandomizedMaterial(
+                      Material.STONE, Material.STONE, "RandomSpawnRatios.Stone", "Stone")));
         }
         sndList.addAll(
             Arrays.asList(

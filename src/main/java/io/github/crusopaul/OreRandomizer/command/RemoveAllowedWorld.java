@@ -28,8 +28,8 @@ public class RemoveAllowedWorld implements CommandExecutor, TabCompleter {
       final int worldIndex = validityCheckAndErrorMessage(sender, args);
 
       if (worldIndex != -1) {
-        this.oreListener.RemoveAllowedWorld(worldIndex);
-        this.oreListener.getConfigFile().set("AllowedWorlds", this.oreListener.GetAllowedWorlds());
+        this.oreListener.removeAllowedWorld(worldIndex);
+        this.oreListener.getConfigFile().set("AllowedWorlds", this.oreListener.getAllowedWorlds());
         this.oreListener.saveConfigFile();
         sender.sendMessage(
             ChatColor.BLUE
@@ -90,8 +90,8 @@ public class RemoveAllowedWorld implements CommandExecutor, TabCompleter {
   private List<String> getWorldNames() {
     final List<String> ret = new ArrayList<String>();
 
-    for (int i = 0; i < this.oreListener.GetAllowedWorlds().size(); i++) {
-      ret.add(this.oreListener.GetAllowedWorlds().get(i));
+    for (int i = 0; i < this.oreListener.getAllowedWorlds().size(); i++) {
+      ret.add(this.oreListener.getAllowedWorlds().get(i));
     }
 
     return ret;
