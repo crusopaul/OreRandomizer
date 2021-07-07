@@ -102,24 +102,21 @@ public class OreListener implements Listener {
         randomizeAndPlaySound(involvedBlock);
         break;
       case STONE:
+      case DEEPSLATE:
+        event.setCancelled(true);
         if (this.RandomizeOnStoneCreation) {
-          event.setCancelled(true);
           randomizeAndPlaySound(involvedBlock);
+        } else {
+          setTypeAndPlaySound(involvedBlock, newBlockType);
         }
         break;
       case OBSIDIAN:
-        if (this.RandomizeOnObsidianCreation) {
-          event.setCancelled(true);
-          randomizeAndPlaySound(involvedBlock);
-        }
-        break;
-      case DEEPSLATE:
         event.setCancelled(true);
-        involvedBlock.setType(newBlockType);
-        involvedBlock
-            .getWorld()
-            .playSound(
-                involvedBlock.getLocation(), this.soundList.getSound().getEnum(), 1, (float) 1);
+        if (this.RandomizeOnObsidianCreation) {
+          randomizeAndPlaySound(involvedBlock);
+        } else {
+          setTypeAndPlaySound(involvedBlock, newBlockType);
+        }
         break;
       default:
         break;
@@ -127,12 +124,19 @@ public class OreListener implements Listener {
   }
 
   private void randomizeAndPlaySound(Block block) {
+    Material newType;
+
     if (block.getLocation().getBlockY() < 17) {
-      block.setType(this.materialList.getRandomOre(true));
+      newType = this.materialList.getRandomOre(true);
     } else {
-      block.setType(this.materialList.getRandomOre(false));
+      newType = this.materialList.getRandomOre(false);
     }
 
+    setTypeAndPlaySound(block, newType);
+  }
+
+  private void setTypeAndPlaySound(Block block, Material mat) {
+    block.setType(mat);
     block
         .getWorld()
         .playSound(block.getLocation(), this.soundList.getSound().getEnum(), 1, (float) 1);
