@@ -50,6 +50,7 @@ public class VersionEngine {
     Goats,
     Bees,
     PreBees,
+    Concrete,
     Legacy,
     None
   }
@@ -80,8 +81,9 @@ public class VersionEngine {
       version = Version.PreBees;
     } else if (BukkitVersionString.contains("1.12.2")
         || BukkitVersionString.contains("1.12.1")
-        || BukkitVersionString.contains("1.12")
-        || BukkitVersionString.contains("1.11.2")
+        || BukkitVersionString.contains("1.12")) {
+      version = Version.Concrete;
+    } else if (BukkitVersionString.contains("1.11.2")
         || BukkitVersionString.contains("1.11.1")
         || BukkitVersionString.contains("1.11")) {
       version = Version.Legacy;
@@ -122,6 +124,89 @@ public class VersionEngine {
                     Material.DIORITE, Material.DIORITE, "RandomSpawnRatios.Diorite", "Diorite"),
                 new RandomizedMaterial(
                     Material.GRANITE, Material.GRANITE, "RandomSpawnRatios.Granite", "Granite")));
+      case Concrete:
+        matList.addAll(
+            Arrays.asList(
+                new RandomizedMaterial(
+                    Material.WHITE_CONCRETE_POWDER,
+                    Material.WHITE_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderWhite",
+                    "ConcretePowderWhite"),
+                new RandomizedMaterial(
+                    Material.ORANGE_CONCRETE_POWDER,
+                    Material.ORANGE_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderOrange",
+                    "ConcretePowderOrange"),
+                new RandomizedMaterial(
+                    Material.MAGENTA_CONCRETE_POWDER,
+                    Material.MAGENTA_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderMagenta",
+                    "ConcretePowderMagenta"),
+                new RandomizedMaterial(
+                    Material.LIGHT_BLUE_CONCRETE_POWDER,
+                    Material.LIGHT_BLUE_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderLightBlue",
+                    "ConcretePowderLightBlue"),
+                new RandomizedMaterial(
+                    Material.YELLOW_CONCRETE_POWDER,
+                    Material.YELLOW_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderYellow",
+                    "ConcretePowderYellow"),
+                new RandomizedMaterial(
+                    Material.LIME_CONCRETE_POWDER,
+                    Material.LIME_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderLime",
+                    "ConcretePowderLime"),
+                new RandomizedMaterial(
+                    Material.PINK_CONCRETE_POWDER,
+                    Material.PINK_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderPink",
+                    "ConcretePowderPink"),
+                new RandomizedMaterial(
+                    Material.GRAY_CONCRETE_POWDER,
+                    Material.GRAY_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderGray",
+                    "ConcretePowderGray"),
+                new RandomizedMaterial(
+                    Material.LIGHT_GRAY_CONCRETE_POWDER,
+                    Material.LIGHT_GRAY_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderLightGray",
+                    "ConcretePowderLightGray"),
+                new RandomizedMaterial(
+                    Material.CYAN_CONCRETE_POWDER,
+                    Material.CYAN_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderCyan",
+                    "ConcretePowderCyan"),
+                new RandomizedMaterial(
+                    Material.PURPLE_CONCRETE_POWDER,
+                    Material.PURPLE_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderPurple",
+                    "ConcretePowderPurple"),
+                new RandomizedMaterial(
+                    Material.BLUE_CONCRETE_POWDER,
+                    Material.BLUE_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderBlue",
+                    "ConcretePowderBlue"),
+                new RandomizedMaterial(
+                    Material.BROWN_CONCRETE_POWDER,
+                    Material.BROWN_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderBrown",
+                    "ConcretePowderBrown"),
+                new RandomizedMaterial(
+                    Material.GREEN_CONCRETE_POWDER,
+                    Material.GREEN_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderGreen",
+                    "ConcretePowderGreen"),
+                new RandomizedMaterial(
+                    Material.RED_CONCRETE_POWDER,
+                    Material.RED_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderRed",
+                    "ConcretePowderRed"),
+                new RandomizedMaterial(
+                    Material.BLACK_CONCRETE_POWDER,
+                    Material.BLACK_CONCRETE_POWDER,
+                    "RandomSpawnRatios.ConcretePowderBlack",
+                    "ConcretePowderBlack")));
       case Legacy:
         if (version == Version.Goats) {
           matList.addAll(
