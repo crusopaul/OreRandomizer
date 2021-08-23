@@ -53,7 +53,7 @@ public class SetOreRatio implements CommandExecutor, TabCompleter {
           ret = false;
         }
 
-        sender.sendMessage(oreSpecifier + " set to " + args[1] + ".");
+        sender.sendMessage(args[0] + " set to " + args[1] + ".");
       } else {
         ret = false;
       }

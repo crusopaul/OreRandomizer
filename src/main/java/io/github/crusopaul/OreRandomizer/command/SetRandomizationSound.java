@@ -38,7 +38,7 @@ public class SetRandomizationSound implements CommandExecutor, TabCompleter {
           this.oreListener.getConfigFile().set("RandomizationSound", soundSpecifier);
           this.soundList.setSound(this.oreListener.getConfigFile());
           this.oreListener.saveConfigFile();
-          sender.sendMessage("Randomization sound set to " + soundSpecifier + ".");
+          sender.sendMessage("Randomization sound set to " + args[0] + ".");
           ret = true;
         } catch (final NullPointerException e) {
           sender.sendMessage(ChatColor.RED + e.getMessage());

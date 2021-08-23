@@ -1,28 +1,30 @@
 RandomSpawnRatios:
+  AncientDebris: 1
   Andesite: 5
   Amethyst: 1
   Coal: 5
   Cobblestone: 20
-  ConcretePowderWhite: 1
-  ConcretePowderOrange: 1
-  ConcretePowderMagenta: 1
-  ConcretePowderLightBlue: 1
-  ConcretePowderYellow: 1
-  ConcretePowderLime: 1
-  ConcretePowderPink: 1
-  ConcretePowderGray: 1
-  ConcretePowderLightGray: 1
-  ConcretePowderCyan: 1
-  ConcretePowderPurple: 1
+  ConcretePowderBlack: 1
   ConcretePowderBlue: 1
   ConcretePowderBrown: 1
+  ConcretePowderCyan: 1
+  ConcretePowderGray: 1
   ConcretePowderGreen: 1
+  ConcretePowderLightBlue: 1
+  ConcretePowderLightGray: 1
+  ConcretePowderLime: 1
+  ConcretePowderMagenta: 1
+  ConcretePowderOrange: 1
+  ConcretePowderPink: 1
+  ConcretePowderPurple: 1
   ConcretePowderRed: 1
-  ConcretePowderBlack: 1
+  ConcretePowderWhite: 1
+  ConcretePowderYellow: 1
   Copper: 1
   Diamond: 1
   Diorite: 3
   Emerald: 1
+  Glowstone: 1
   Gold: 3
   Granite: 3
   Iron: 4
