@@ -59,7 +59,9 @@ public class VersionEngine {
   private Version parseVersionString(String BukkitVersionString) {
     final Version version;
 
-    if (BukkitVersionString.contains("1.17.1") || BukkitVersionString.contains("1.17")) {
+    if (BukkitVersionString.contains("1.18")
+        || BukkitVersionString.contains("1.17.1")
+        || BukkitVersionString.contains("1.17")) {
       version = Version.Goats;
     } else if (BukkitVersionString.contains("1.16.5")
         || BukkitVersionString.contains("1.16.4")
