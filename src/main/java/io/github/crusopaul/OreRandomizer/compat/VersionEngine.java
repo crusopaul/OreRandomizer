@@ -60,7 +60,8 @@ public class VersionEngine {
   private Version parseVersionString(String BukkitVersionString) {
     final Version version;
 
-    if (BukkitVersionString.contains("1.19.3")
+    if (BukkitVersionString.contains("1.19.4")
+        || BukkitVersionString.contains("1.19.3")
         || BukkitVersionString.contains("1.19.2")
         || BukkitVersionString.contains("1.19.1")
         || BukkitVersionString.contains("1.19")) {
