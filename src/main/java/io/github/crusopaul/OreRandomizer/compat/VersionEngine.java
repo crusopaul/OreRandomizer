@@ -47,6 +47,7 @@ public class VersionEngine {
   public RandomizationSoundList randomizationSoundList;
 
   private enum Version {
+    Sniff,
     Frogs,
     Goats,
     AncientDebris,
@@ -60,7 +61,9 @@ public class VersionEngine {
   private Version parseVersionString(String BukkitVersionString) {
     final Version version;
 
-    if (BukkitVersionString.contains("1.19.4")
+    if (BukkitVersionString.contains("1.20")) {
+      version = Version.Sniff;
+    } else if (BukkitVersionString.contains("1.19.4")
         || BukkitVersionString.contains("1.19.3")
         || BukkitVersionString.contains("1.19.2")
         || BukkitVersionString.contains("1.19.1")
@@ -111,6 +114,8 @@ public class VersionEngine {
     final List<RandomizationSound> sndList = new ArrayList<RandomizationSound>();
 
     switch (version) {
+      case Sniff:
+        sndList.addAll(Arrays.asList(new RandomizationSound(Sound.ENTITY_SNIFFER_SCENTING, "Sniff")));
       case Frogs:
         sndList.addAll(Arrays.asList(new RandomizationSound(Sound.ENTITY_FROG_AMBIENT, "Wibbit")));
       case Goats:
