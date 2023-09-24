@@ -61,7 +61,8 @@ public class VersionEngine {
   private Version parseVersionString(String BukkitVersionString) {
     final Version version;
 
-    if (BukkitVersionString.contains("1.20.1")
+    if (BukkitVersionString.contains("1.20.2")
+        || BukkitVersionString.contains("1.20.1")
         || BukkitVersionString.contains("1.20")) {
       version = Version.Sniff;
     } else if (BukkitVersionString.contains("1.19.4")
